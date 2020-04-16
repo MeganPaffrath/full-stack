@@ -18,3 +18,7 @@
   takes two inputs : height in inches, and weight in pounds. BMI is calculated
   and the output tells the user if they are a healthy weight or not as well as
   the user's calculated BMI.
+
+
+#### APIs
+* [Notes](api/api-notes.md)
