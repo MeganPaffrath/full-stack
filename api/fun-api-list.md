@@ -14,3 +14,5 @@ search for recipes, ingredients, and photos
 * [Paypal](https://developer.paypal.com/classic-home/) : accept payments
 * [zenscrape](https://zenscrape.com/web-scraping-api/?ref=apilist.fun) : for
 web scraping
+* [scrapestack](https://scrapestack.com/?ref=apilist.fun) : for
+web scraping
