@@ -20,3 +20,7 @@
   * Authentication : when you make a request, the API needs to recognize you
   and know how often you are using their data (if you go over a threshold,
   they may try to charge for your usage or block further usage)
+* POSTMAN
+  * good for testing APIs
+  * provides a user interface to help apply api keys and values
+  * shows results in properly formatted JSON
