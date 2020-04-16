@@ -22,3 +22,4 @@
 
 #### APIs
 * [Notes](api/api-notes.md)
+* [API List](api/fun-api-list.md) : a list of APIs to use for future projects
