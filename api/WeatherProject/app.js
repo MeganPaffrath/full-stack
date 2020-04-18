@@ -24,19 +24,30 @@ app.post("/", urlencodedParser, function(req, res) {
     console.log(response.statusCode);
     response.on("data", function(data) {
       const weatherData = JSON.parse(data);
-      const temp = weatherData.main.temp;
-      const description = weatherData.weather[0].description;
-      const icon = weatherData.weather[0].icon;
-      const preIcon = "http://openweathermap.org/img/wn/";
-      const postIcon = "@2x.png";
-      const imageHTML = `<img src="${preIcon}${icon}${postIcon}" style="background-color: black;">`;
-      res.setHeader('Content-type','text/html');
-      res.write(imageHTML);
-      res.write("<h1>It is " + temp +
-      " degrees in "+ req.body.cityName +"! You can see " + description + ".</h1>");
-      res.send();
+      try {
+        const temp = weatherData.main.temp;
+        const description = weatherData.weather[0].description;
+        const icon = weatherData.weather[0].icon;
+        const preIcon = "http://openweathermap.org/img/wn/";
+        const postIcon = "@2x.png";
+        const imageHTML = `<img src="${preIcon}${icon}${postIcon}" style="background-color: black;">`;
+        res.setHeader('Content-type','text/html');
+        res.write(imageHTML);
+        res.write("<h1>It is " + temp +
+        " degrees in "+ req.body.cityName +"! You can see " + description + ".</h1>");
+        res.send();
+      } catch(e) {
+        res.send("Could not retrieve data for entry.");
+        console.log("Error: " + e);
+      }
+
     });
   });
+
+
+
+
+
 
   console.log("Post rec.");
 });
