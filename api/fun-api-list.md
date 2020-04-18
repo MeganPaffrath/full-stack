@@ -16,3 +16,5 @@ search for recipes, ingredients, and photos
 web scraping
 * [scrapestack](https://scrapestack.com/?ref=apilist.fun) : for
 web scraping
+* [mailchimp](https://mailchimp.com/developer/) : used for newsletter project
+(deployment directory) [NewsLetter](../deployment/newsletter-signup)
