@@ -3,6 +3,9 @@
 #### Useful Resources:
 * [Resources](resources.md)
 
+#### Tools:
+* [Tools](tools.md) : helpful tools for web dev
+
 #### Express And Node:
 * Notes:
   * [Express Notes](express-and-node/express.md)
@@ -23,3 +26,6 @@
 #### APIs
 * [Notes](api/api-notes.md)
 * [API List](api/fun-api-list.md) : a list of APIs to use for future projects
+* [Weather App](api/WeatherProject) : User inputs city, application outputs
+the weather, an icon of the weather, and a description of the weather for the
+specified city.
