@@ -15,10 +15,12 @@ app.post("/", urlencodedParser, function(req, res) {
   // get data from API:
   let location = req.body.cityName;
   let units = "imperial";
-  const apiKey = "4afd421ad42e1fa04d7bffec566da5bd";
+  const apiFile = require("../../api-keys.json");
+  const apiKey = apiFile.apiKeys.openweathermap;
+  console.log(apiKey);
 
   const url = "https://api.openweathermap.org/data/2.5/weather?q=" + location +
-  "&appid=" + apiKey + "&units=" + units;
+  "&appid=" + "304e3af6c66dd8cf4ea388a73afe1d2a" + "&units=" + units;
 
   https.get(url, function(response) {
     console.log(response.statusCode);
@@ -38,6 +40,7 @@ app.post("/", urlencodedParser, function(req, res) {
         res.send();
       } catch(e) {
         res.send("Could not retrieve data for entry.");
+        console.log(weatherData);
         console.log("Error: " + e);
       }
 
