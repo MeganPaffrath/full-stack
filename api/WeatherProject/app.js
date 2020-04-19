@@ -15,7 +15,7 @@ app.post("/", urlencodedParser, function(req, res) {
   // get data from API:
   let location = req.body.cityName;
   let units = "imperial";
-  const apiFile = require("../../api-keys.json");
+  const apiFile = require("../../private-data.json");
   const apiKey = apiFile.apiKeys.openweathermap;
   console.log(apiKey);
 

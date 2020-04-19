@@ -10,5 +10,5 @@ package-lock.json
 # mac
 .DS_Store
 
-# API keys
-api-keys.json
+# Private Data
+private-data.json
