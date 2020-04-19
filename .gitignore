@@ -10,4 +10,5 @@ package-lock.json
 # mac
 .DS_Store
 
-# api-keys.json
+# API keys
+api-keys.json
