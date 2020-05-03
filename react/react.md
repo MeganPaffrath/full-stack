@@ -4,6 +4,9 @@
 #### Content:
 * [Basics](#Basics)
 * [JSX](#JSX)
+* [Components](#Components)
+  * [Function Components](#Function-Components)
+  * [Class Components](#Class-Components)
 
 React is a JS library for building user interfaces, it is component based.
 
@@ -70,24 +73,39 @@ let someDiv = <div>
   * each element needs a unique key
   ```JavaScript
   let example = [
-    <p key="i1">First para</p>,
-    <p key="i2">Second para</p>,
-    <p key="i3">Third para</p>
+      <p key="i1">First para</p>,
+      <p key="i2">Second para</p>,
+      <p key="i3">Third para</p>
   ]
   ```
   * `IMPORTANT`: not doing this properly may give errors in console. Might not effect build. Be careful with this. Check errors and fix them.
   * Transforming an array of JS Obj to HTML elements:
     * Array.map() : for everything
+      * map can be used to generate array containing all contents
+      * remember to add keys to each jsx element in array
     * Array.filter() : to select those that match a specification
 * JSX naturally prevents injection attacks. When we have an element within {variable}, it will always HTML escape it.
   * it is safe to put user input into JSX
 
-## Function Components
+## Components
+### Function Components
+* We can have functions return jsx expressions
+```JavaScript
+function SomeFunction(props) { // note: function name upperCC
+    return <h1>Hello, {props.name}</h1>;
+}
+let contents = <section>
+    <SomeFunction name="Megan" /> // attribute val is fed into func.
+</section>
+```
+  * Function begins w/ capital letter and returns JSX => react interprets this to be a component
+
+### Class Components
+* `Look into react hooks`
 
 ## Rendering
 
-## Class Components
-* `Look into react hooks`
+
 
 ## Interactivity
 
