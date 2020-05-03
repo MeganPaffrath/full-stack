@@ -1,6 +1,9 @@
 # Resources / Tech
 [Back To Main](README.md)
 
+## Educational Resources
+[Web Dev Courses](https://www.grotto-networking.com/index.html)
+
 ## Filepaths
 * `__dirname` gives the file path of the current file, no matter where it is hosted
 

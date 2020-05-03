@@ -16,6 +16,9 @@ React is a JS library for building user interfaces, it is component based.
   * For production build we must use relative urls:
     * `parcel build <entry file> --public-url ./`
 
+### Note
+* React DOM uses camelCase unlike standard HTML attribute names and CSS style
+
 ### Getting Started
 index.html:
 ```html
@@ -72,6 +75,12 @@ let someDiv = <div>
     <p key="i3">Third para</p>
   ]
   ```
+  * `IMPORTANT`: not doing this properly may give errors in console. Might not effect build. Be careful with this. Check errors and fix them.
+  * Transforming an array of JS Obj to HTML elements:
+    * Array.map() : for everything
+    * Array.filter() : to select those that match a specification
+* JSX naturally prevents injection attacks. When we have an element within {variable}, it will always HTML escape it.
+  * it is safe to put user input into JSX
 
 ## Function Components
 
