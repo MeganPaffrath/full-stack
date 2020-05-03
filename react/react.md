@@ -38,15 +38,40 @@ index.js:
 ```JavaScript
 import React from "react";
 import ReactDOM from "react-dom";
-ReactDOM.render( // function call to React to render content
-    <h1> Content that gets rendered </h1>,
+
+const topic = <h1>Some Topic</h1>; // JSX
+
+ReactDOM.render( <section>// function call to React to render content
+    {topic}
+    <h2> Content that gets rendered </h2>
+    </section>,
     document.getElementById("root") // renders content into "root"
 );
 ```
 Use parcel to run: `parcel index.html`
 
 ## JSX
-
+* We can store html into a JS variable
+* Example w/ variable substitution
+```javascript
+let myNumber = 24;
+function hoursInYear() {
+  return myNumber*365;
+}
+let someDiv = <div>
+              <p>There are {myNumber} hours in a day.</p>
+              <p>There are {hoursInYear()} hours in a year.</p>
+              </div>;
+```
+* React will render an array of JSX elements just like a bunch of HTML
+  * each element needs a unique key
+  ```JavaScript
+  let example = [
+    <p key="i1">First para</p>,
+    <p key="i2">Second para</p>,
+    <p key="i3">Third para</p>
+  ]
+  ```
 
 ## Function Components
 
