@@ -1,5 +1,5 @@
 # JavaScript
-[Back To Main](README.md)
+[Back To Main](../README.md)
 
 * A Class example:
 ```JavaScript
