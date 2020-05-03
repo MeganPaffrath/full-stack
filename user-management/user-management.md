@@ -17,3 +17,6 @@
     * Argon2, PBKDF2, scrypt, bcrypt
       * many based in C/C++ libraries
 * Can use a fake user generator for production (Mimesis is one generator)
+
+## Passwords
+* Some password characters might cause issues at login

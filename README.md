@@ -43,6 +43,9 @@ specified city.
 ### User Management
 * [User Management Notes](user-management/user-management.md)
 
+### Cookies
+* [Cookies](cookies/cookies.md)
+
 ## Tools and Resources ----------------------
 
 #### Useful Resources:

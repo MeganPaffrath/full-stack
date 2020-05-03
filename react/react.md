@@ -107,7 +107,7 @@ let contents = <section>
 class MyComponent extends React.Component {
     constructor(props) {
       super(props);
-      this.state = "someState"; // state has special meaning to react
+      this.state = {show: "Page"}; // state has special meaning to react
     }
 }
 render() {
@@ -122,9 +122,34 @@ render() {
 #### Bind
 * Sometimes we need to bind a function so that we do not loose the context of `this`
 
+#### Arrays
+* To modify arrays: we need to use concat rather than push. This returns a new array. Then setState() to make the array variable the new array.
+* To remove item: use `Array.filter`
+* To update elements, use `Array.map`
+* These both return new arrays, we can then use setState() to update the array
+
+#### Objects
+* To update objects
+```JavaScript
+// if this contains a this.user:
+user = {fName: "Megan", lName: "Paffrath", userID: "23952"};
+// Then...
+// use Object.assign() => creates a copy of the object
+let newUser = Object.assign({}, this.state.user);
+this.setState({user: newUser}); // React will see these changes
+```
+
+## Data Flow
+* Data flows down.
+  * we don't know anything about components we use (if they are stateful or stateless)
+  * ex: state is not accessible to any component other than the one that owns and sets it.
+* A component can pass its state down as props to its children components
+
 ## Rendering
 
 ## Interactivity
+* Form-like components : Controlled Components
+  *
 
 ## Component Life Cycle
 * class components enable our components to be a part of the component life cycle
