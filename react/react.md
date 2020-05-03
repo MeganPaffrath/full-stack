@@ -102,11 +102,33 @@ let contents = <section>
 
 ### Class Components
 * `Look into react hooks`
+* Class Component Example
+```JavaScript
+class MyComponent extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = "someState"; // state has special meaning to react
+    }
+}
+render() {
+  return <div>{someJSXElement}</div>
+}
+```
+* Use state variable to keep track of data/page status
+  * When a component's state is changed => react calls render() to update
+  * To modify state: `setState()`
+  * When to change: user interactions, network interactions, timer for updates
+
+#### Bind
+* Sometimes we need to bind a function so that we do not loose the context of `this`
 
 ## Rendering
-
-
 
 ## Interactivity
 
 ## Component Life Cycle
+* class components enable our components to be a part of the component life cycle
+* Deciding what components to show and where to keep data
+  * add variables to remember data/information from user
+    * state
+  *

@@ -18,6 +18,9 @@ specified city.
 
 ## Topics And Notes ------------------------
 
+#### JavaScript
+* [JavaScript](javascript/javascript.md)
+
 #### Express And Node:
 * [Server Notes](express-and-node/my-express-server/notes.md)
 * [Express Notes](express-and-node/express.md)
