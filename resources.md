@@ -11,3 +11,5 @@
 
 ## React
 [React Walk-through](https://reactjs.org/docs/hello-world.html)
+[JSX in Depth](https://reactjs.org/docs/jsx-in-depth.html)
+[JSX Looks Like An Abonmination](https://medium.com/javascript-scene/jsx-looks-like-an-abomination-1c1ec351a918)
