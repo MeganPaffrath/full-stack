@@ -30,6 +30,12 @@ specified city.
 #### Deployment
 * [Deployment Notes](deployment/deploy.md)
 
+### React
+* [React Notes](react/react.md)
+
+### User Management
+* [User Management Notes](user-management/user-management.md)
+
 ## Tools and Resources ----------------------
 
 #### Useful Resources:
