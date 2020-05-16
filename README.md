@@ -5,15 +5,14 @@
 * [Topics And Notes](#Topics-And-Notes)
 * [Tools and Resources](#Tools-and-Resources)
 
-
-## Running Projects
 ---
+## Running Projects
 * [Signup for my newsletter!](https://lit-woodland-72587.herokuapp.com/)
   * This newsletter sends user input through the mailchimp API to my mailchimp mailing list.
   * Deployed with Heroku
 
-## Mini Projects
 ---
+## Mini Projects
 #### Express And Node:
 * [A Mini Server](express-and-node/my-express-server) : An extremely basic server
 * [Simple Calculator](express-and-node/my-calculator) : This application
@@ -28,9 +27,8 @@ the user's calculated BMI.
 the weather, an icon of the weather, and a description of the weather for the
 specified city.
 
-
-## Topics And Notes
 ---
+## Topics And Notes
 
 #### JavaScript
 * [JavaScript](javascript/javascript.md)
@@ -60,8 +58,8 @@ specified city.
 ### Cookies
 * [Cookies](cookies/cookies.md)
 
-## Tools and Resources
 ---
+## Tools and Resources
 
 #### Useful Resources:
 * [Resources](resources.md)
