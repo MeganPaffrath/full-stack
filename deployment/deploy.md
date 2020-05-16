@@ -4,8 +4,6 @@
 ## Sample Project - Mailing list sign up:
 * Uses Mailchimp to gather emails for mailing list
   * Deployed on Heroku
-*
-
 
 ## Deployment:
 * Heroku:
@@ -25,3 +23,5 @@
     4. Set up git repo
     5. deploy : `heroku create`
     6. `git push heroku master`
+  * Update:
+    * `git add .` => `git commit -m ...` => `git push heroku master`
