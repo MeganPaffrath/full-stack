@@ -8,10 +8,19 @@ const https = require("https");
 app.use(express.static("public")); // all static files to use
 
 // mailchimp
-const apiFile = require("../../private-data.json");
-const apiKey = apiFile.apiKeys.mailchimp.api;
-const listID = apiFile.apiKeys.mailchimp.listID;
-const apiKeyLastDigit = apiKey.charAt(apiKey.length - 1);
+let apiKey, listID, apiKeyLastDigit;
+
+try {
+  const apiFile = require("../../private-data.json");
+  apiKey = apiFile.apiKeys.mailchimp.api;
+  listID = apiFile.apiKeys.mailchimp.listID;
+} catch (e) {
+  apiKey = process.env.API_KEY;
+  listID = process.env.LIST_ID;
+}
+
+apiKeyLastDigit = apiKey.charAt(apiKey.length - 1);
+
 // console.log(apiKey + " & " + listID + " & " + apiKeyLastDigit);
 
 
@@ -69,6 +78,6 @@ app.post("/failure", function(req, res) {
 });
 
 
-app.listen(processs.env.PORT || 4444, function() {
+app.listen(process.env.PORT || 4444, function() {
   console.log("Listening on port 4444");
 });
