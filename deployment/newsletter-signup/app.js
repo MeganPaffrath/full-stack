@@ -68,6 +68,7 @@ app.post("/failure", function(req, res) {
   res.redirect("/");
 });
 
-app.listen(4444, function() {
+
+app.listen(processs.env.PORT || 4444, function() {
   console.log("Listening on port 4444");
 });
