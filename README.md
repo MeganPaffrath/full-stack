@@ -45,12 +45,14 @@ specified city.
 ### Requests
 * [Requests](requests/requests.md)
 
-
 #### Deployment
 * [Deployment Notes](deployment/deploy.md)
 
 ### React
 * [React Notes](react/react.md)
+
+### Templates
+* [Templates](templates/templates.md)
 
 ### User Management
 * [User Management Notes](user-management/user-management.md)
