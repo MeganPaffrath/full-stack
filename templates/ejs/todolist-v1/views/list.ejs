@@ -7,11 +7,19 @@
   <body>
 
 
-  <%if (kindOfDay === "Saturday" || kindOfDay === "Sunday") {%>
-    <h1 style="color: purple"><%= kindOfDay %> List</h1>
-  <%} else {%>
-    <h1 style="color: orange"><%= kindOfDay %> List</h1>
-  <%}%>
+  <h1> <%= kindOfDay %> </h1>
+
+  <ul>
+    <%listItems.forEach(function(listItem) {%>
+      <li><%= listItem %></li></li>
+    <%})%>
+  </ul>
+
+  <form class="addItem" action="/" method="post">
+    <label for="item">Add Item:</label><br>
+    <input type="text" name="item">
+    <input type="submit" value="Add">
+  </form>
 
   </body>
 </html>

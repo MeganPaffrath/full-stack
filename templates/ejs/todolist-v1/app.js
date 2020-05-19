@@ -1,45 +1,36 @@
 //jshint esversion: 6
 
 const express = require("express");
+const urlencodedParser = express.urlencoded({extended: true});
 const app = express();
 
 app.set('view engine', 'ejs');
+
+let items = [];
+
+app.post("/", urlencodedParser, function(req, res) {
+  item = req.body.item;
+  items.push(item);
+  res.redirect("/");
+});
 
 app.get("/", function(req, res) {
 
   var today = new Date();
   var currDay = today.getDay();
   console.log(currDay);
-  var day = "";
 
-  switch (currDay) {
-    case 0:
-      day = "Sunday";
-      break;
-    case 1:
-      day = "Monday";
-      break;
-    case 2:
-      day = "Tuesday";
-      break;
-    case 3:
-      day = "Wednesday";
-      break;
-    case 4:
-      day = "Thursday";
-      break;
-    case 5:
-      day = "Friday";
-      break;
-    case 6:
-      day = "Saturday";
-      break;
-    default:
-      console.log("Error: current day is iqual to: " + currDay);
-  }
+  var options = {
+    weekday: "long",
+    day: "numeric",
+    month: "long"
+  };
+
+  var day = today.toLocaleDateString("en-US", options);
 
   res.render('list', {
-    kindOfDay: day
+    kindOfDay: day,
+    listItems: items
   });
 
 });
