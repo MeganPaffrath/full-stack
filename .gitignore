@@ -12,3 +12,7 @@ package-lock.json
 
 # Private Data
 private-data.json
+
+# Parcel builds
+.cache
+dist
