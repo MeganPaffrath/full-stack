@@ -1,0 +1,31 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+.box1 {
+  background: red;
+}
+.box2 {
+  background: pink;
+}
+.box3 {
+  background: grey;
+}
+@media screen and (min-width: 700px) {
+  main {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .box1 {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  .box2 {
+    grid-row: 1/3;
+  }
+}

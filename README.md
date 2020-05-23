@@ -60,6 +60,9 @@ specified city.
 ### Cookies
 * [Cookies](cookies/cookies.md)
 
+### Grid
+* [Grid](grid/grid.md)
+
 ---
 ## Tools and Resources
 
