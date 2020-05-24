@@ -13,6 +13,12 @@
   * `sudo npm install -g nodemon`
   * to run: `nodemon <file.js>`
 
+## Parcel
+* For local server:
+  * `parcel index.html`
+* Production build:
+  * `parcel build index.html --public-url ./`
+
 ## React
 [React Walk-through](https://reactjs.org/docs/hello-world.html)
 [JSX in Depth](https://reactjs.org/docs/jsx-in-depth.html)
