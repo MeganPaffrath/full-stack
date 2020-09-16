@@ -5,6 +5,7 @@ const urlencodedParser = express.urlencoded({extended: true});
 const app = express();
 
 app.set('view engine', 'ejs');
+app.use(express.static("public"));
 
 let items = [];
 
@@ -15,7 +16,6 @@ app.post("/", urlencodedParser, function(req, res) {
 });
 
 app.get("/", function(req, res) {
-
   var today = new Date();
   var currDay = today.getDay();
   console.log(currDay);

@@ -3,6 +3,7 @@
 
 ## Educational Resources
 [Web Dev Courses](https://www.grotto-networking.com/index.html)
+[App Brewery - Resources](https://www.appbrewery.co/p/web-development-course-resources/)
 
 ## Filepaths
 * `__dirname` gives the file path of the current file, no matter where it is hosted

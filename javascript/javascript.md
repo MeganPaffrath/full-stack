@@ -1,6 +1,19 @@
 # JavaScript
 [Back To Main](../README.md)
 
+## Variables
+* Local variables = created within a function and can only be used inside the function
+* Global variables = were created outside of the function and can be accessed anywhere
+* In if, else, while, (curly brace code)
+  * var is Global - typically want to AVOID this keyword
+  * let and const are just variables and will be local
+* Types:
+  * `var x = 1`:
+  * `let y = 1`:
+  * `const z = 1`: cannot be changed once given a value
+
+## Other
+
 * A Class example:
 ```JavaScript
 class Person {

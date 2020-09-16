@@ -3,23 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title>To-Do List</title>
+    <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body>
 
+    <div class="box" id="heading">
+      <h1> <%= kindOfDay %> </h1>
+    </div>
 
-  <h1> <%= kindOfDay %> </h1>
+    <div class="box">
+      <ul>
+        <%listItems.forEach(function(listItem) {%>
+          <div class="item">
+            <input type="checkbox">
+            <p><%= listItem %></p>
+          </div>
+        <% })%>
+      </ul>
 
-  <ul>
-    <%listItems.forEach(function(listItem) {%>
-      <li><%= listItem %></li></li>
-    <%})%>
-  </ul>
+      <form class="addItem" action="/" method="post">
+        <input type="text" name="item" placeholder="New Item" autocomplete="off">
+        <button type="submit" name="button">+</button>
+      </form>
+    </div>
 
-  <form class="addItem" action="/" method="post">
-    <label for="item">Add Item:</label><br>
-    <input type="text" name="item">
-    <input type="submit" value="Add">
-  </form>
+
+
+
 
   </body>
 </html>

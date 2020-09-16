@@ -17,3 +17,5 @@
       });
       ```
     * `<% JS %>` : scriptlet tag
+  * Use `public` dir to store css/styles.css
+    * in app.js, include: `app.use(express.static("public"));`
