@@ -6,14 +6,14 @@
 * [Tools and Resources](#Tools-and-Resources)
 
 ---
-## Running Projects
+# Running Projects
 * [Signup for my newsletter!](https://lit-woodland-72587.herokuapp.com/)
   * This newsletter sends user input through the mailchimp API to my mailchimp mailing list.
   * Deployed with Heroku
 
 ---
-## Mini Projects
-#### Express And Node:
+# Mini Projects
+### Express And Node:
 * [A Mini Server](express-and-node/my-express-server) : An extremely basic server
 * [Simple Calculator](express-and-node/my-calculator) : This application
 takes two numbers as form input and outputs the sum of the user input values.
@@ -22,7 +22,7 @@ takes two inputs : height in inches, and weight in pounds. BMI is calculated
 and the output tells the user if they are a healthy weight or not as well as
 the user's calculated BMI.
 
-#### APIs
+### APIs
 * [Weather App](api/WeatherProject) : User inputs city, application outputs
 the weather, an icon of the weather, and a description of the weather for the
 specified city.
@@ -31,48 +31,48 @@ specified city.
 ### Templating
 * [EJS Todo List](templates/ejs/todolist-v1) : a simple to do list using templating
 ---
-## Topics And Notes
+# Topics And Notes:
 
-#### Basics
+### Basics
 * [JavaScript](javascript/javascript.md)
 * [CSS](css/css.md)
+  * [Grid](css/grid/grid.md)
 * [HTML](html/html.md)
 
-#### Express And Node:
+### Express And Node:
 * [Server Notes](express-and-node/my-express-server/notes.md)
 * [Express Notes](express-and-node/express.md)
 * [Node Notes](express-and-node/node.md)
 
-#### APIs
+### APIs
 * [Notes](api/api-notes.md)
 * [API List](api/fun-api-list.md) : a list of APIs to use for future projects
 
 ### Requests
 * [Requests](requests/requests.md)
 
-#### Deployment
+### Deployment
 * [Deployment Notes](deployment/deploy.md)
 
 ### React
 * [React Notes](react/react.md)
 
-### Templates
+### Templating
 * [Templates](templates/templates.md)
 
-### User Management
+### Users and User Experience
 * [User Management Notes](user-management/user-management.md)
-
-### Cookies
 * [Cookies](cookies/cookies.md)
 
-### Grid
-* [Grid](grid/grid.md)
+
+### Explore Deeper
+  * [More Topics and Ideas](more-topics.md)
 
 ---
-## Tools and Resources
+# Tools and Resources:
 
-#### Useful Resources:
+### Useful Resources:
 * [Resources](resources.md)
 
-#### Tools:
+### Tools:
 * [Tools](tools.md) : helpful tools for web dev
