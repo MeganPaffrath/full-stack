@@ -16,3 +16,6 @@ private-data.json
 # Parcel builds
 .cache
 dist
+
+# Personal
+reference-locations.txt
