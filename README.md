@@ -27,11 +27,16 @@ the user's calculated BMI.
 the weather, an icon of the weather, and a description of the weather for the
 specified city.
 
+
+### Templating
+* [EJS Todo List](templates/ejs/todolist-v1) : a simple to do list using templating
 ---
 ## Topics And Notes
 
-#### JavaScript
+#### Basics
 * [JavaScript](javascript/javascript.md)
+* [CSS](css/css.md)
+* [HTML](html/html.md)
 
 #### Express And Node:
 * [Server Notes](express-and-node/my-express-server/notes.md)
