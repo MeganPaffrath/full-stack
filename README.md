@@ -64,6 +64,8 @@ specified city.
 * [User Management Notes](user-management/user-management.md)
 * [Cookies](cookies/cookies.md)
 
+### Databases
+* [SQL](sql/sql.md)
 
 ### Explore Deeper
   * [More Topics and Ideas](more-topics.md)
