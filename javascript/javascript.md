@@ -11,6 +11,8 @@
   * `var x = 1`:
   * `let y = 1`:
   * `const z = 1`: cannot be changed once given a value
+    * Objects: You can push items into a const array, but assigning a new array to the variable would not work
+    * Arrays: you can change the values assosiated with keys, but you cannot overwrite an object`
 
 ## Other
 

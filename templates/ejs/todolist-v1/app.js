@@ -1,14 +1,19 @@
 //jshint esversion: 6
 
 const express = require("express");
-const urlencodedParser = express.urlencoded({extended: true});
-const app = express();
+// Require a node module, allows access to date() funciton
+const date = require(__dirname + "/date.js");
 
+// for parsing
+const urlencodedParser = express.urlencoded({extended: true});
+
+const app = express();
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
-let items = [];
-let workItems =[];
+// you can push to const array, but not assign to a new array
+const items = [];
+const workItems =[];
 
 app.post("/", urlencodedParser, function(req, res) {
   item = req.body.item;
@@ -23,17 +28,7 @@ app.post("/", urlencodedParser, function(req, res) {
 });
 
 app.get("/", function(req, res) {
-  var today = new Date();
-  var currDay = today.getDay();
-  console.log(currDay);
-
-  var options = {
-    weekday: "long",
-    day: "numeric",
-    month: "long"
-  };
-
-  var day = today.toLocaleDateString("en-US", options);
+  const day = date.getDay();
 
   res.render('list', {
     listTitle: day,
@@ -47,7 +42,7 @@ app.get("/work", function(req, res) {
 })
 
 app.post("/work", function(req, res) {
-  let item = req.body.newItem;
+  const item = req.body.newItem;
   workItems.push(item);
   res.redirect("/work");
 })

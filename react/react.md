@@ -8,8 +8,6 @@
   * [Function Components](#Function-Components)
   * [Class Components](#Class-Components)
 
-React is a JS library for building user interfaces, it is component based.
-
 ## Basics
 ### Parcel
 * Use `Parcel.js` for production builds
@@ -29,7 +27,7 @@ index.html:
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" href="index.css" />
+	<!-- <link rel="stylesheet" href="index.css" /> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 	<title>React App</title>
 </head>
@@ -45,13 +43,40 @@ index.js:
 import React from "react";
 import ReactDOM from "react-dom";
 
-const topic = <h1>Some Topic</h1>; // JSX
+// Import Class Components
+import Charts from "./Charts";
 
-ReactDOM.render( <section>// function call to React to render content
-    {topic}
-    <h2> Content that gets rendered </h2>
-    </section>,
-    document.getElementById("root") // renders content into "root"
+function Title(props) {
+    return (
+      <div className="title">
+        <h1>App Title</h1>
+      </div>
+    );
+  }
+  
+
+class App extends React.Component {
+constructor(props) {
+    super(props); // Must call
+    this.state = {
+        item: 'value'
+    };
+}
+
+render() {
+    const title = <Title />;
+
+    return (
+        <main>
+            {title}
+            <Charts/>
+        </main>
+    );
+}
+}
+
+ReactDOM.render(<App/>,
+document.getElementById("root")
 );
 ```
 Use parcel to run: `parcel index.html`
@@ -87,7 +112,7 @@ let someDiv = <div>
 * JSX naturally prevents injection attacks. When we have an element within {variable}, it will always HTML escape it.
   * it is safe to put user input into JSX
 
-## Components
+## Components (Class and Function Components)
 ### Function Components
 * We can have functions return jsx expressions
 ```JavaScript
@@ -101,19 +126,42 @@ let contents = <section>
   * Function begins w/ capital letter and returns JSX => react interprets this to be a component
 
 ### Class Components
-* `Look into react hooks`
-* Class Component Example
+Class Component Example (MyComponent.js):
 ```JavaScript
+//jshint esversion: 6
+import React from "react";
+import ReactDOM from "react-dom";
+
 class MyComponent extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {show: "Page"}; // state has special meaning to react
+      this.state = {
+        item: "value"
+      };
+    }
+    render() {
+      return <div>This is a component!</div>
     }
 }
+
+export default MyComponent;
+```
+Import into index.js:
+```JavaScript
+// Comonents
+import Halves from "./Halves";
+```
+Return in render:
+```JavaScript
 render() {
-  return <div>{someJSXElement}</div>
+  return (
+    <main>
+      <MyComponent/>
+    </main>
+  );
 }
 ```
+
 * Use state variable to keep track of data/page status
   * When a component's state is changed => react calls render() to update
   * To modify state: `setState()`
@@ -157,3 +205,6 @@ this.setState({user: newUser}); // React will see these changes
   * add variables to remember data/information from user
     * state
   *
+
+## To Do:
+* `Look into react hooks`

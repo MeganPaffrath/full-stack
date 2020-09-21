@@ -148,3 +148,4 @@ Contents:
 * Add: USING and NATURAL keywords
 * ADD `GROUP BY`
 * `DEFAULT`
+* `HAVING` vs `WHERE` and when to use each
