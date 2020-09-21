@@ -65,7 +65,8 @@ specified city.
 * [Cookies](cookies/cookies.md)
 
 ### Databases
-* [SQL](sql/sql.md)
+* [Databases](databases/databases.md)
+* [SQL](databases/sql/sql.md)
 
 ### Explore Deeper
   * [More Topics and Ideas](more-topics.md)

@@ -1,5 +1,5 @@
 # SQL
-[Return](../README.md)
+[Return](../../README.md)
 
 Contents:
 * [Single Tables](single-table.md) - NEED TO MOVE CONTENT
