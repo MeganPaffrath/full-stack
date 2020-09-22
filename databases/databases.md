@@ -1,6 +1,9 @@
 # Databases
 [Back To Main](../README.md)
 
+
+## When starting w/ any new database
+* Learn CRUD Operations (create, read, update, delete)
 ## Choosing a database
 * There are so many out there
 * Depending on the data you are storing and the structure of data, you may prefer to use one database over another

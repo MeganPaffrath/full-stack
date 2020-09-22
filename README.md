@@ -66,7 +66,11 @@ specified city.
 
 ### Databases
 * [Databases](databases/databases.md)
+  * SQL vs NoSQL
 * [SQL](databases/sql/sql.md)
+  * update, query, summaries
+* [MongoDB](databases/mongodb/mongodb.md)
+  * CRUD, relationships
 
 ### Explore Deeper
   * [More Topics and Ideas](more-topics.md)
