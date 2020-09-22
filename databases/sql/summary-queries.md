@@ -51,3 +51,28 @@ ORDER BY column_y
     ```
 * `HAVING`:
     * Let't you determine output after using `GROUP BY`
+## Summary with a final summary row
+```SQL
+SELECT person_id, COUNT(*) AS item_count,
+    SUM(item_total) AS item_total
+FROM some_table
+GROUP BY person_id WITH ROLLUP -- this specifies that we want a summary row that gives a sum of all of the rows
+
+-- same idea as
+SELECT COUNT(*), SUM(item_total) FROM some_table
+```
+* We can use the GROUPING() function to specify text for a cell
+    ```SQL
+    -- if grouping function returns 1, the cell is NULL
+    SELECT IF (GROUPING(some_value) = 1, 'New String', some_value) AS some_value
+    ...
+    ...
+    --- to ONLY display summary rows:
+    HAVING GROUPING(some_value) = 1 or GROUPING(another_value) = 1
+    ```
+## The OVER clause
+* Important class for aggregate functions
+* The over class converts the `aggregate functions` into `aggregate window` functions
+
+## Things to understand better:
+* the OVER clause
