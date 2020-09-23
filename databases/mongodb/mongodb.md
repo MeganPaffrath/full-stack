@@ -85,3 +85,9 @@ Topics:
 * Native MongoDB
 
 ## The Native MongoDB Driver
+* [Drivers](https://docs.mongodb.com/drivers/)
+    * getting started w/ native driver
+
+## mongoose
+* `npm i mongoose`
+* Find CRUD examples in [FruitsProject](FruitsProject)

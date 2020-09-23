@@ -18,3 +18,5 @@
     ```JavaScript
     let day = date.getDate();
     ```
+# Node package manager
+* simplified: `npm init -y`
