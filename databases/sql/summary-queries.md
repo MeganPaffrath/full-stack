@@ -73,6 +73,16 @@ SELECT COUNT(*), SUM(item_total) FROM some_table
 ## The OVER clause
 * Important class for aggregate functions
 * The over class converts the `aggregate functions` into `aggregate window` functions
+* `OVER()`: the window is all of the results
+* `OVER(PARTITION BY some_item)`
+* `UNBOUNDED PRECEDING` : begining of window
+* `UNBOUNDED FOLLOWING` : end window
+
+## Naming a window
+```SQL
+WINDOW window_name AS
+    ([partition_clause] [order_clause] [Frame_clasue])
+```
 
 ## Things to understand better:
 * the OVER clause

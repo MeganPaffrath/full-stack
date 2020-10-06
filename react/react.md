@@ -2,11 +2,17 @@
 [Back To Main](../README.md)
 
 #### Content:
+* [Helpful Things](#Helpful-Things)
 * [Basics](#Basics)
 * [JSX](#JSX)
 * [Components](#Components)
   * [Function Components](#Function-Components)
   * [Class Components](#Class-Components)
+
+
+## Helpful Things
+* Create react app:
+  * `sudo npm install -g create-react-app`
 
 ## Basics
 ### Parcel
