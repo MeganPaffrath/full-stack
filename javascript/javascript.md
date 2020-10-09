@@ -1,6 +1,9 @@
 # JavaScript
 [Back To Main](../README.md)
 
+## Callback Functions
+
+
 ## Variables
 * Local variables = created within a function and can only be used inside the function
 * Global variables = were created outside of the function and can be accessed anywhere
