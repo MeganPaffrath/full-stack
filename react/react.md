@@ -1,6 +1,90 @@
 # React
 [Back To Main](../README.md)
+#### Content:
+* [Get Started -> Build](#Get-Started-->-Build)
+* [Component Life Cycle](#Component-Life-Cycle)
+* [Modularization](#Modularization)
+* [State](#State)
+* [Props](#Props)
+* [Accessibility](#Accessibility)
+* [Packages](#Packages)
 
+
+# Get Started -> Build
+* Getting Started:
+  * `sudo npm install -g create-react-app`
+  * `create-react-app <app-name>`
+* Production build:
+  * `npm run build` : used to make a production build within build folder
+    * can be served with a static server
+  * Run locally before deploying:
+    * `sudo npm install serve -g`
+    * `serve -s build` : runs on localhost:5000
+# Component Life Cycle
+* `Mounting` : Whenever component is added to the DOM
+* `Updating` : new props, setState(), forceUpdate()
+* `Unmounting` : Whenever component is taken away
+* Life cycle methods:
+  * Only availible when using class syntax, cant use with function components.
+  * `render()` : the only required method of the component lifecycle
+    * whenever updates/changes made, render is called
+  * `constructor()` : called before component is mounted
+    * good place to initialize state
+    * can bind event handler methods to this class using constructor
+  * `componentDidMount()` : renders as soon as the component is mounted
+  * `componentDidUpdate()` : renders whenever the component is updated (occurs on state changes)
+  * `componentWillUnmount()` : used for any cleanup before unmounting
+
+# Modularization
+* Break code down into components to keep code cleaner and to make it easier to work with others
+
+# State
+* Good rule of thumb to keep State in the root of the tree. 
+  * Parent component then can bass state down to it's children
+  * Read more about "Lifting State Up" in react documentation [TO-DO]
+* setState
+  * Set state is asynchronous, so if you are relying on the previous state to set a value, you can use a callback function within function to setState
+
+# Props
+* Default Props
+```JavaScript
+// in the event that there are no values, this value is used instead
+  static defaultProps = {
+    books: [
+      {"title": "Some Title", "author": "Some Author", "pages": 0}
+    ]
+  }
+```
+* Also, when using a function to process data, the properties passed into the function can be given default values
+  ```JavaScript
+  const Item = ({name="No Name Provided}") {
+    return (
+      <h1>{item}</h1>
+    )
+  }
+  ```
+# Accessibility
+* create-react-app helps warn us when we are doing anything wrong in terminal (ex: not giving alt text to an image)
+* Check out Accessibility on documentation [TO-DO]
+
+# Packages
+## Proptypes
+* Used to make sure all of our properties being supplied are of the correct type
+* `import PropTypes from 'prop-types'`
+  * To install: `npm install prop-types --save`
+* Example of defining types:
+  ```JavaScript
+  Book.propTypes = {
+    title: PropTypes.string,
+    author: PropTypes.string,
+    pages: PropTypes.number,
+    freeBookmark: PropTypes.bool
+  }
+  ```
+
+
+
+# Old Content - UPDATE AND REMOVE
 #### Content:
 * [Helpful Things](#Helpful-Things)
 * [Basics](#Basics)
@@ -8,12 +92,6 @@
 * [Components](#Components)
   * [Function Components](#Function-Components)
   * [Class Components](#Class-Components)
-
-
-## Helpful Things
-* Create react app:
-  * `sudo npm install -g create-react-app`
-
 ## Basics
 ### Parcel
 * Use `Parcel.js` for production builds
@@ -214,3 +292,11 @@ this.setState({user: newUser}); // React will see these changes
 
 ## To Do:
 * `Look into react hooks`
+
+
+### Learning More - Courses
+* Linkedin Learning:
+  * React Recipes
+  * React: Lifecycles
+  * React: Components, Context, and Accessibility
+* Keep an eye on the React Blog to know about any changes

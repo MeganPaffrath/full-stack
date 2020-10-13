@@ -83,6 +83,3 @@ SELECT COUNT(*), SUM(item_total) FROM some_table
 WINDOW window_name AS
     ([partition_clause] [order_clause] [Frame_clasue])
 ```
-
-## Things to understand better:
-* the OVER clause
