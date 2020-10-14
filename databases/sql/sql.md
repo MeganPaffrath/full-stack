@@ -1,7 +1,12 @@
+
 # SQL
 [Return](../../README.md)
 
 Contents:
+* [Basics](basics.md)
+    * client/server systems
+    * Relational database model
+    * SQL statements
 * [Single Tables](single-table.md) - NEED TO MOVE CONTENT
 * [Two+ Tables](two-or-more-tables.md) - NEED TO MOVE CONTENT
 * [Update Tables](update-tables.md) - Personal Rating: (4.5/5)
@@ -11,6 +16,7 @@ Contents:
     * Update rows
     * Delete Rows
 * [Summary Queries](summary-queries.md)
+* [subqueries](subqueries.md)
 
 
 
