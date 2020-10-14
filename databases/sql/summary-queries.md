@@ -3,6 +3,16 @@ Reference: `murach's MySQL 3rd Edition by Joel Murach` Chapter 6
 * [Back to SQL](sql.md)
 * [Return](../README.md)
 
+
+# Joins
+* Purpose: to get common data
+* Types:
+    * Implicit
+    * Inner Join: looks at data where BOTH tables have the data
+    * Outer Join: gets unmatched data
+        * Left Outer Join
+        * Right outer Join
+
 We want to analyze the records that we fetch
 
 ## Aggregate Functions : take list of values & returns output

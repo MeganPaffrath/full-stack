@@ -1,4 +1,6 @@
 # Basics
+* [Return To SQL](sql.md)
+* [Return to Main](../../README.md)
 ### References: 
 * `Murach’s MySQL (3rd Edition)` (Chapter 1)
 
