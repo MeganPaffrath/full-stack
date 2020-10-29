@@ -48,7 +48,8 @@
   - shows results in properly formatted JSON
 
 # Creating an API
-* Spark
+
+- Spark
 
 # Old (to be edited / removed)
 
