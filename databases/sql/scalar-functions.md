@@ -111,3 +111,90 @@ Reference: `Murach's MySQL 3rd Edition by Joel Murach` (Chapter 9)
 - EXTRACT(unit from date)
   - UNITS:
     - SECOND, MINUTE, HOUR, DAY, MONTH, YEAR, MINUTE_SECOND, HOUR_MINUTE, DAY_HOUR, YEAR_MONTH, HOUR_SECOND, DAY_MINUTE, DAY_SECOND
+
+## Functions calculating dates and times
+
+- DATE_ADD(date, INTERVAL expression unit) : example increase by 5 days
+- DATE_SUB(date, INTERVAL expression unit)
+- DATEDIFF(date1, date2)
+- TO_DAYS(date)
+- TIME_TO_SEC(time)
+
+# Date / time
+
+...
+
+# The CASE function
+
+- case example:
+
+```SQL
+SELECT column, some_value
+  CASE some_value
+    WHEN 1 then `value was 1`
+    WHEN 2 THEN `value was 2`
+    WHEN 3 THEN `value was 3`
+  END as value_column
+FROM some_table
+```
+
+# IF function
+
+- Format
+  - `IF(test expression, if_true_statement, otherwise_expression)`
+- Example
+
+  ```SQL
+  SELECT some_value,
+    IF(some_value = 5, 'Equals 5', 'Not 5')
+    AS five
+  FROM some_table
+  ```
+
+  # IFNULL function
+
+  - Format
+    - `IFNULL(test_expression, replacement_value)`
+  - Example
+    ```SQL
+    SELECT payment
+      IFNULL(payment, 'no payment made') AS paid_date
+    FROM payment_table
+    ```
+
+# Regular expression functions
+
+- REGEX_LIKE(expr, pattern)
+- REGEX_INSTR(expr, pattern [, start])
+- REGEXP_SUBSTR(expr, pattern [, start])
+- REGEXP_REPLACE(expr, pattern, replace[, start])
+
+# Ranking funcitons
+
+- ROW_NUMBER() : OVER([partition_clause] order_clause)
+- RANK() : OVER([partition_clause] order_clause)
+- DENSE_RANK() : OVER([partition_clause] order_clause)
+- NTILE(integer_expression) : OVER([partition_clause] order_clause)
+
+* These functions help us do grouping, help us create window functions for non-agregate
+
+# NTILE function
+
+```SQL
+SELECT terms_description
+  NTIME(2) over (ORDER BY terms_id) as tile2,
+  NTIME(3) over (ORDER BY terms_id) as tile3,
+  NTIME(4) over (ORDER BY terms_id) as tile4,
+FROM terms
+```
+
+# LAG function
+
+- function that helps refer to values in the other rows in results secition
+  - get data from previous row
+
+# PERCENT_RANK and CUME_DIST
+
+- PERCENT_RANK
+
+* CUME_DIST
