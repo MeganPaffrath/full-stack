@@ -1,14 +1,23 @@
 # Resources / Tech
+
 [Back To Main](README.md)
 
 # Educational Resources and Influences:
-* [Web Dev Courses](https://www.grotto-networking.com/index.html)
-* [App Brewery - Resources](https://www.appbrewery.co/p/web-development-course-resources/)
-* Murach’s MySQL (3rd Edition)
+
+- [Web Dev Courses](https://www.grotto-networking.com/index.html)
+- [App Brewery - Resources](https://www.appbrewery.co/p/web-development-course-resources/)
+- Murach’s MySQL (3rd Edition)
+
+# Stay in the know:
+
+- [Dev.to](https://dev.to/)
+- [Indiehacker.com](https://www.indiehackers.com/)
 
 # Resources I want to check out:
-* [Free Graphic Design Courses](https://dribbble.com/stories/2020/10/08/free-graphic-design-courses-online?utm_campaign=2020-10-13&utm_medium=email&utm_source=courtside-20201013)
-* [Tale of Two Clocks](https://www.html5rocks.com/en/tutorials/audio/scheduling/)
+
+- [Free Graphic Design Courses](https://dribbble.com/stories/2020/10/08/free-graphic-design-courses-online?utm_campaign=2020-10-13&utm_medium=email&utm_source=courtside-20201013)
+- [Tale of Two Clocks](https://www.html5rocks.com/en/tutorials/audio/scheduling/)
+
 ---
 
 <!-- 

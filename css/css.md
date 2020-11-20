@@ -1,17 +1,13 @@
 # CSS
+
 [Back To Main](../README.md)
 
-* Background:
-  * divide corner to corner-ish: `background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);`
+# Preprocessors:
 
-## Selectors
-* ref to w3schools CSS Selector Reference or MDN for more
-* Select all p in div ex:
-  * `input:checked+p {}`
-    * targets all p elements that come after checked inputs
-* particular attribute:
-  ```
-  input[type="checkbox"]{
-
-  }
-  ```
+- Why use a preprocessor?
+  - don't have to write as much code
+  - easier to edit code
+  - having reusable libraries
+  - more modularity and scalability
+- Types of preprocessors:
+  - SASS and LESS

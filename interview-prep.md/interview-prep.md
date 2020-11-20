@@ -1,0 +1,27 @@
+# Interview Prep
+
+- React
+  - Understand lifestyle hooks
+    - component did mount, create, destroy, ...
+  - Why use it?
+  - what is it?
+- CSS
+  - selectors
+    - nth element, nth child, ...
+  - gotchas:
+    - box sizing - border box
+    - display none/hidden
+    - floats
+- JS
+  - promises
+  - callbacks
+  - async/await
+  - observables
+  - Scoping
+    - var: global
+    - const: block (can be changed, but not re assigned)
+    - let: block
+  - closures, inheritance, es6 classes, hoisting
+- White board
+  - string manipulation
+  -
