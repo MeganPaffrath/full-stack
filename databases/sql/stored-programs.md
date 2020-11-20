@@ -1,6 +1,11 @@
 # Language Skills for writing Stored Programs
 
-Reference: `Murach's MySQL 3rd Edition by Joel Murach` (Chapter 13)
+## References:
+
+- `Murach's MySQL 3rd Edition by Joel Murach` (Chapter 13)
+- [Video: SQL Server Programming pt12 - cursors](https://www.youtube.com/watch?v=RHRjLd0bEaQ)
+
+## Links:
 
 - [Back to SQL](sql.md)
 - [Return](../../README.md)
@@ -60,7 +65,69 @@ END REPEAT;
 
 # Cursor
 
-- Declare
+```SQL
+CREATE PROCEDURE demo_cursor()
+BEGIN
+  -- initialize test val for if no vals in cursor
+  DECLARE no_records INT DEFAULT FALSE;
+  -- DECLARE variables
+  DECLARE var_1 VARCHAR(50);
+  DECLARE var_2 char(2);
+  DECLARE data_gathered VARCHAR(1000) DEFAULT "";
+
+  -- First declare the cursor
+  DECLARE cursor_name CURSOR
+    FOR SELECT * from table_name
+
+  -- open
+  OPEN cursor_name;
+
+  -- if no records found
+  DECLARE CONTINUE handler for NOT FOUND
+    SET no_records = TRUE;
+
+  -- loop through results (while there are still records)
+  WHILE no_records=FALSE DO
+    FETCH cursor_name INTO var_1, var_2;
+    SET data_gathered = CONCAT(data_gathered, var_1, " ", var_2, "; ");
+  END WHILE;
+
+  -- close cursor
+  CLOSE cursor_name;
+
+  SELECT data_gatehred AS "data";
+END
+
+```
+
+1. Declare Cursor
+
+```SQL
+DECLARE cursor_name CURSOR
+  FOR SELECT * FROM table_name
+```
+
+2. Open the Cursor, then do the work
+
+```SQL
+OPEN cursor_name
+```
+
+3. Close the Cursor
+
+```
+CLOSE cursor_name
+```
+
+4. Remove references to the cursor (good housekeeping)
+
+```SQL
+DEALLOCATE cursor_name
+```
+
+## On cursors:
+
+- Declare cursor
   - `DECLARE cursor_name CURSOR FOR select_statement;`
 - Declare handler
   - `DECLARE CONTINUE HANDLER FOR NOT FOUND handler_statement;`
@@ -70,3 +137,5 @@ END REPEAT;
   - `FETCH cursor_name INT variable1[, var2][, var3]...`
 - close cursor
   - `CLOSE cursor_name`
+- remove reference to cursor (good housekeeping)
+  - `DEALLOCATE cursor_name`
