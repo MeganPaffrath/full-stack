@@ -24,4 +24,3 @@
   - closures, inheritance, es6 classes, hoisting
 - White board
   - string manipulation
-  -

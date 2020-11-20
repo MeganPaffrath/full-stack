@@ -48,7 +48,7 @@
 
 ### Basics
 
-- [JavaScript](javascript/javascript.md)
+- [JavaScript](javascript/README.md)
 - [CSS](css/css.md)
   - [Grid](css/grid/grid.md)
   - CSS preprocessors: SASS and LESS

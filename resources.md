@@ -10,8 +10,16 @@
 
 # Stay in the know:
 
-- [Dev.to](https://dev.to/)
-- [Indiehacker.com](https://www.indiehackers.com/)
+- DEV.to
+- Indiehackers.com
+- StackOverflow.com
+- DevDocs.io
+- news.ycombinator.com
+- Hashnode.com
+- Medium.com
+- GitHub.com
+- GlassDoor.com
+- Daily.dev
 
 # Resources I want to check out:
 
