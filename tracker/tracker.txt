@@ -1,0 +1,17 @@
+This is a file for personal reference. It is a log of what I have been working on. This will not provide you any value unless you have a competitive personaility. If so, enjoy :P
+
+Nov 20, 2020: 02:13
+  - MERN Full stack user authentication
+    - repo: user-login (a private repo :P)
+    - created mongodb cluster
+      - created a user with read and write priv
+    - whitelisted my IP address
+    - req to add new users to db works
+      - encrypt w/ bcryptjs
+    - req to login user works
+      - checks against encrypted password
+      - sends back jwt
+Nov 19, 2020: 06:31
+  - SQL, JavaScript
+Nov 18, 2020: 00:55
+Nov 17, 2020: 02:32
