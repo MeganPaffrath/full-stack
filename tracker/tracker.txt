@@ -1,5 +1,21 @@
 This is a file for personal reference. It is a log of what I have been working on. This will not provide you any value unless you have a competitive personaility. If so, enjoy :P
 
+Nov 21, 2020: XX:XX
+  - MERN full stack user authentication
+    - react front end
+    - UserContext.js
+      - import {createContext} from 'react-router-dom'
+      - seet value of context within browser router
+    - utilize localStorage
+      - for access to token, could be safer...
+    - react: useEffect for side effects
+      - outside of effect of component (ex: backend)
+        - cant have async func as effect, make async funciton within useEffect func
+    - npm i axios
+      - axios returns response
+      - manage http requests
+    - UserContext.Provider
+      - Keep track of user
 Nov 20, 2020: 02:13
   - MERN Full stack user authentication
     - repo: user-login (a private repo :P)
