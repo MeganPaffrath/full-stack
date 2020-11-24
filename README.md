@@ -17,29 +17,28 @@
 
 # Mini Projects
 
-### Express And Node:
-
-- [A Mini Server](express-and-node/my-express-server) : An extremely basic server
-- [Simple Calculator](express-and-node/my-calculator) : This application
-  takes two numbers as form input and outputs the sum of the user input values.
-- [Simple BMI Calculator](express-and-node/bmi-calculator) : This application
-  takes two inputs : height in inches, and weight in pounds. BMI is calculated
-  and the output tells the user if they are a healthy weight or not as well as
-  the user's calculated BMI.
-
-### APIs
-
-- [Weather App](api/WeatherProject) : User inputs city, application outputs
-  the weather, an icon of the weather, and a description of the weather for the
-  specified city.
-
-### Templating
-
-- [EJS Todo List](templates/ejs/todolist-v1) : a simple to do list using templating
+- [Dynamic Blog](projects/blog)
+  - Tech: Node, Express, EJS (templating)
+  - User can add new posts and page updates accordingly
+  - Utilizes templating and route parameters to determine which post to display
+- [A Mini Server](express-and-node/my-express-server)
+  - Tech: Node, Express
+  - An extremely basic server
+- [Simple Calculator](express-and-node/my-calculator)
+  - Tech: Node, Express
+  - This application takes two numbers as form input and outputs the sum of the user input values.
+- [Simple BMI Calculator](express-and-node/bmi-calculator)
+  - Tech: Node, Express
+  - This application takes two inputs : height in inches, and weight in pounds. BMI is calculated and the output tells the user if they are a healthy weight or not as well as the user's calculated BMI.
+- [Weather App](api/WeatherProject)
+  - User inputs city, application outputs the weather, an icon of the weather, and a description of the weather for the specified city.
+- [EJS Todo List](templates/ejs/todolist-v1)
+  - Tech: EJS
+  - a simple to do list using templating
 
 ---
 
-# Topics And Notes:
+# Topics And Notes
 
 ### Testing
 

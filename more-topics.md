@@ -19,6 +19,7 @@
   - GraphQL: "Get many resources in a single request"
 - React
   - explain lifestyle hooks
+- dependency injection
 
 # Topics to cover
 
@@ -30,6 +31,10 @@
 - Personal website
   - finish implementing new page
   - add a dark theme to personal website useing useContext
+- projects/blog
+  - use password to add posts
+  - store posts in db
+  - remove posts
 
 # Full Stack Developer Job Requirements:
 
