@@ -2,6 +2,7 @@
 
 - [Running Projects](#Running-Projects)
 - [Mini Projects](#Mini-Projects)
+- [Big Projects](#Big-Projects)
 - [Topics And Notes](#Topics-And-Notes)
 - [Tools and Resources](#Tools-and-Resources)
 
@@ -12,6 +13,15 @@
 - [Signup for my newsletter!](https://lit-woodland-72587.herokuapp.com/)
   - This newsletter sends user input through the mailchimp API to my mailchimp mailing list.
   - Deployed with Heroku
+
+---
+
+# Big Projects
+
+- Time Tracker App: <a href="https://github.com/MeganPaffrath/time-tracker" target=_blank>View Repo</a>
+  - Full Stack MERN (MongoDB, Express, React, Node) Application
+  - Utilizes JWT (JSON Web Tokens) to keep track of user sessions
+  - Users can create accounts, login, make time logs, and view their time logs
 
 ---
 
