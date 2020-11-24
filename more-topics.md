@@ -5,6 +5,7 @@
 - `CTR`: click-through rate, the ratio of users who click a link to the number of users who actually view what it leads to
   - often used to measure success of advertising campaigns
 - DSL
+- middleware for use in Express apps (understand how this works better)
 - techniques of white box testing
   - statement coverage, branch coverage, path coverage
 - OAuth
@@ -18,6 +19,17 @@
   - GraphQL: "Get many resources in a single request"
 - React
   - explain lifestyle hooks
+
+# Topics to cover
+
+- React Related
+  - useContext
+
+# Fun things to do
+
+- Personal website
+  - finish implementing new page
+  - add a dark theme to personal website useing useContext
 
 # Full Stack Developer Job Requirements:
 

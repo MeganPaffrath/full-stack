@@ -1,6 +1,16 @@
 This is a file for personal reference. It is a log of what I have been working on. This will not provide you any value unless you have a competitive personaility. If so, enjoy :P
 
-Nov 21, 2020: XX:XX
+
+Nov 23, 2020: 09:26
+  - time-tracker
+    - user login & reg forms work
+    - user can log new activities
+    - all of user activities from db output to screen
+Nov 22, 2020: 01:58
+  - time-tracker application
+    - back to design
+    - user login/registration requests
+Nov 21, 2020: 06:37
   - MERN full stack user authentication
     - react front end
     - UserContext.js
@@ -16,6 +26,7 @@ Nov 21, 2020: XX:XX
       - manage http requests
     - UserContext.Provider
       - Keep track of user
+    - users can add and delete todos from db
 Nov 20, 2020: 02:13
   - MERN Full stack user authentication
     - repo: user-login (a private repo :P)

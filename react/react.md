@@ -4,7 +4,7 @@
 
 # Getting Started
 
-- Quick Start: `npx create-react app <app-name> `
+- Quick Start: `npx create-react-app <app-name> `
 - Start App: `npm start`
 - For React Router: `npm i react-router-dom`
 
