@@ -1,0 +1,38 @@
+* {
+  color: black;
+  padding: 0;
+  margin: 0;
+}
+
+header,
+footer {
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+}
+
+.about {
+  /* height: 300vh; */
+  display: flex;
+  background-color: rosybrown;
+}
+
+.about-title {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.about-pages {
+  width: 50%;
+}
+
+.about-pages div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}

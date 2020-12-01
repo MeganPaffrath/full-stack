@@ -10,6 +10,10 @@
   npm i --save lodash
   ```
 
+# "That Makes Life Easier"
+
+- generate lorem: `lorem<word count>`
+
 # Old
 
 - JSON
