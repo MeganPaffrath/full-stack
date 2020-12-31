@@ -84,3 +84,21 @@ app.listen(3000, function() {
 
 - Set up MongoDB
   - DB name, collections and collection fields
+
+# Routing
+
+- Use express
+
+  ```JavaScript
+  app.get(route, function(req, res){
+
+  })
+  ```
+
+- Read from db
+
+  ```JavaScript
+  <ModelName>.find(function(err, results){
+    // use the found results doc
+  });
+  ```
