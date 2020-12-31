@@ -70,7 +70,7 @@
 - [Node Notes](express-and-node/node.md)
 
 ### APIs
-
+- [RESTful APIs](api/RESTful/README.md)
 - [Notes](api/api-notes.md)
 - [API List](api/fun-api-list.md) : a list of APIs to use for future projects
 

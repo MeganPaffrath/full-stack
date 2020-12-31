@@ -27,3 +27,7 @@ Motivation and concepts towards growth
 
 - Just being at your desk does not mean you are working. It is important to be in a state of flow.
 - Really separate work from other tasks. Put all attention into this one thing. Avoid thinking about other things and doing other things.
+
+# Bad Events
+
+- "There are things in life that you can change, and some that you cannot. The things that you cannot change usually involve other people. The things you can change are how you view a situation and how you act." -Angela Yu
