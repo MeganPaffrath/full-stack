@@ -31,3 +31,11 @@ Motivation and concepts towards growth
 # Bad Events
 
 - "There are things in life that you can change, and some that you cannot. The things that you cannot change usually involve other people. The things you can change are how you view a situation and how you act." -Angela Yu
+
+# Job Search
+
+- Interviewers care more about what you can do rather than where you studied.
+- Build a portfolio
+- Look at skills that job descriptions require
+- Build projects that demonstrate these skills
+- Help others: stack overflow, ect.
