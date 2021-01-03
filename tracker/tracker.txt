@@ -3,6 +3,9 @@ This is a file for personal reference. It is a log of what I have been working o
 Jan 2, 2021: xx:xx
   - Authentication
     - user login, utilize db
+  - Security
+    - database encryption
+    - environment vars
 Jan 1, 2021: 00:48
   - RESTful APIs
   - mongoose

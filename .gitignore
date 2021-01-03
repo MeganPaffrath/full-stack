@@ -1,3 +1,9 @@
+# Security
+*.env
+
+# Personal
+reference-locations.txt
+
 # Logs
 logs
 *.log
@@ -16,9 +22,6 @@ private-data.json
 # Parcel builds
 .cache
 dist
-
-# Personal
-reference-locations.txt
 
 # create-react-app
 .idea/
