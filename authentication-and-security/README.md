@@ -9,6 +9,10 @@
   - npm i bcrypt
   - refer to npm doc, use correct bcrypt version for correct node version
   - using diff version of nde....use nvm
+- passport
+- passport-local
+- passport-local-mongoose
+- express-session
 
 # Authentication
 
@@ -25,3 +29,8 @@
   - using hashing - no encryption key.
     - use hash function to turn password into a hashed password
     - almost impossible to go backwards (turn hash into password)
+
+# Cookies
+
+- Session cookies
+  - a period of time that browser interacts with server
