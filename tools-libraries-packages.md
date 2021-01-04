@@ -1,6 +1,13 @@
 [Back To Main](README.md)
 
-# Tools
+# Packages
+
+# Useful Things
+
+- gitignore templates:
+  - [Node gitignore](https://github.com/github/gitignore/blob/master/Node.gitignore)
+
+# OLD THINGS ---------------------
 
 # Libraries
 
@@ -11,6 +18,7 @@
   ```
 
 # Other
+
 - Robo 3T
   - Graphic user interface for MongoDB
   - robomongo.org

@@ -5,10 +5,10 @@
 - mongoose-encryption
   - npm i mongoose-encryption
   - encryption
-- dotenv
-  - npm i dotenv
-  - NOTE: .env file is hidden
-  - this is wehre you store evironment vars
+- bcrypt
+  - npm i bcrypt
+  - refer to npm doc, use correct bcrypt version for correct node version
+  - using diff version of nde....use nvm
 
 # Authentication
 
@@ -21,3 +21,7 @@
 # Security
 
 - Database encryption
+  - using encryption key - should be hackable...
+  - using hashing - no encryption key.
+    - use hash function to turn password into a hashed password
+    - almost impossible to go backwards (turn hash into password)
