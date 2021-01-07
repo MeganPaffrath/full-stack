@@ -1,5 +1,10 @@
 This is a file for personal reference. It is a log of what I have been working on. This will not provide you any value unless you have a competitive personaility. If so, enjoy :P
 
+Jan 6, 2021: 04:00
+  - React
+    - jsx
+    - components
+  - codesandbox.io
 Jan 3, 2021: 02:10
   - Hashing passwords
     - exploring different options

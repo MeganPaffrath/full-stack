@@ -2,11 +2,84 @@
 
 [Back To Main](../README.md)
 
+# Outline
+
+- [Organization](#Organization)
+- [Getting Started](#Getting-Started)
+- [JSX](#JSX)
+- [Babel](#Babel)
+- [Files](#Files)
+
+# Organization
+
+- Break down complex user interface structure into a component tree
+
+```
+      APP
+      / \
+    NAV   LIST
+          /
+        ITEM
+```
+
 # Getting Started
 
 - Quick Start: `npx create-react-app <app-name> `
 - Start App: `npm start`
 - For React Router: `npm i react-router-dom`
+
+# JSX
+
+- React works by creating JSX files
+  - html is picked up by complier
+- Allows us to write plain html elements in js file
+- Can put variables into jsx elements
+  ```JavaScript
+  const name = "megan"
+  ReactDOM.render(<h1>Hello {name}</h1>, document.getElementById("root"));
+  ```
+
+# Babel
+
+- allows us to use next generation js, and converts it down to browser compatible js
+- converts to vanilla js code
+
+# Files
+
+- public
+  - index.html
+    - body contains div with id="root",
+      - this is the root of the application - where everything is inserted
+    - after this div, we must provide the script of the app
+  - styles.css
+- src
+
+  - components
+    - App.jsx
+    - Heading.jsx
+    - List.jsx
+  - index.js
+
+  ## Index.js
+
+  ```JavaScript
+  import React from "react";
+  import ReactDOM from "react-dom";
+
+  const name = "Megan";
+
+  ReactDOM.render(
+    <div>
+      <h1>Hello {name}</h1>
+      <p>How's it going</p>
+    </div>,
+    document.getElementById("root")
+  );
+  ```
+
+## Tips
+
+- Research has shown that the longer a file is, the harder it is to understand.
 
 # OLD:
 
