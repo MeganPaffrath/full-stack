@@ -2,6 +2,8 @@ This is a file for personal reference. It is a log of what I have been working o
 
 Jan 8, 2021: xx:xx
   - React
+    - functional components
+    - props
 Jan 7, 2021: 00:42
   - React
     - import/export vs require

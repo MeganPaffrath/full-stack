@@ -83,6 +83,28 @@
 
 - Research has shown that the longer a file is, the harder it is to understand.
 
+# Components
+
+## Functional componenets
+
+- Functional component
+  ```JavaScript
+  // Functional Component
+  function Card(props) {
+    return <div>
+      <h2>{props.term}</h2>
+      <p>{prps.def}</p>
+    </div>
+  }
+  ```
+- Passing props to component
+  ```JavaScript
+  <Card
+    term="property"
+    def="an attribute, quality, or characteristic of something."
+  />
+  ```
+
 # OLD:
 
 #### Content:
