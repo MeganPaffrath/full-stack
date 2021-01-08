@@ -15,18 +15,20 @@
 - Break down complex user interface structure into a component tree
 
 ```
-      APP
-      / \
-    NAV   LIST
-          /
-        ITEM
+           APP
+        /   |   \
+    NAV   LIST    USER
+          /        /
+        ITEM      TASKS
 ```
 
 # Getting Started
 
 - Quick Start: `npx create-react-app <app-name> `
+- Go into new dir: `cd <app-name>`
 - Start App: `npm start`
-- For React Router: `npm i react-router-dom`
+- Possible packages (`npm i <package-name>`) :
+  - react-router-dom
 
 # JSX
 
