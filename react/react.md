@@ -109,23 +109,35 @@
 
 - Mapping:
 
-```JavaScript
-import terms from "../terms.js";
+  ```JavaScript
+  import terms from "../terms.js";
 
-function createTerm(term) {
-  return <Term
-    key={term.id}
-    name={term.name}
-    def={term.meaning}
-  />
-}
+  function createTerm(term) {
+    return <Term
+      key={term.id}
+      name={term.name}
+      def={term.meaning}
+    />
+  }
 
-function Dictionary() {
-  return <dl className="dictionary">
-    {terms.map(createTerm)};
-  </dl>;
-}
-```
+  function Dictionary() {
+    return <dl className="dictionary">
+      {terms.map(createTerm)};
+    </dl>;
+  }
+  ```
+
+  - Simplified
+
+    ```JavaScript
+    {terms.map( (term) => (
+        <Term
+          key={term.id}
+          name={term.name}
+          def={term.meaning}
+        />
+      ))};
+    ```
 
 # OLD:
 
