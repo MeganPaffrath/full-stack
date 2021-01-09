@@ -8,6 +8,7 @@
 
 # Index
 
+- [Common Things](#Common-Things)
 - [Introduction](#Introduction)
 - [Basics](#Basics)
 - [Data](#Data)
@@ -18,6 +19,11 @@
 - [Functions and Objects]
 - [DOM]
 - [Loops]
+
+# Common Things
+
+- map, filter, reduce, find, findIndex
+  - [JavaScript Examples](./map-filter-reduce-find.js)
 
 # Introduction
 

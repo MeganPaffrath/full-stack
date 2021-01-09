@@ -15,7 +15,6 @@ console.log(emojipedia);
 
 function Dictionary() {
   return <dl className="dictionary">
-
     {emojipedia.map(createTerm)};
   </dl>;
 }

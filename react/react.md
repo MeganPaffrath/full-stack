@@ -105,6 +105,28 @@
   />
   ```
 
+## Maping Data To Components
+
+- Mapping:
+
+```JavaScript
+import terms from "../terms.js";
+
+function createTerm(term) {
+  return <Term
+    key={term.id}
+    name={term.name}
+    def={term.meaning}
+  />
+}
+
+function Dictionary() {
+  return <dl className="dictionary">
+    {terms.map(createTerm)};
+  </dl>;
+}
+```
+
 # OLD:
 
 #### Content:
