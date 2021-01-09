@@ -5,6 +5,7 @@
 - [Big Projects](#Big-Projects)
 - [Topics And Notes](#Topics-And-Notes)
 - [Tools and Resources](#Tools-and-Resources)
+- [Special Thanks](#Special-Thanks)
 
 ---
 
@@ -70,6 +71,7 @@
 - [Node Notes](express-and-node/node.md)
 
 ### APIs
+
 - [RESTful APIs](api/RESTful/README.md)
 - [Notes](api/api-notes.md)
 - [API List](api/fun-api-list.md) : a list of APIs to use for future projects
@@ -119,3 +121,8 @@
 ### Tools:
 
 - [Tools](tools.md) : helpful tools for web dev
+
+# Special Thanks
+
+- [Angela Yu](https://www.appbrewery.co/) - For leading an amazing course on Udemy
+  - [The Complete 2021 Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/)
