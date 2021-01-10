@@ -139,6 +139,45 @@
       ))};
     ```
 
+# State
+
+- User interface changes reflect the changes in state
+
+# Hooks
+
+- hooks must be used inside of functional components
+- useState
+
+## React Hooks: Simple counter App
+
+- [See code](https://codesandbox.io/s/counter-tutl6?file=/src/App.js)
+
+  ```JavaScript
+  import React, { useState } from "react";
+  import "./styles.css";
+
+  export default function Counter() {
+    const [number, setNumber] = useState(0);
+
+    function increment() {
+      setNumber(number + 1);
+    }
+
+    function decrement() {
+      setNumber(number - 1);
+    }
+
+    return (
+      <div className="Counter">
+        <h1>{number}</h1>
+        <button onClick={increment}>+</button>
+        <button onClick={decrement}>-</button>
+      </div>
+    );
+  }
+
+  ```
+
 # OLD:
 
 #### Content:
