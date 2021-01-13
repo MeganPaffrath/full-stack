@@ -1,5 +1,22 @@
 This is a file for personal reference. It is a log of what I have been working on. This will not provide you any value unless you have a competitive personaility. If so, enjoy :P
 
+Jan: 22:46 + 6:46
+
+Jan 12, 2021: 04:43
+  - React 
+    - Functional vs Class components
+    - complex state
+    - spread operator
+    - handling component tree
+  - my website
+Jan 11, 2021: 01:53
+  - React
+    - event handling
+    - controlled components
+  - js
+    - destructuring 
+Jan 10, 2021: 01:31
+  - Personal website
 Jan 9, 2021: 04:50
   - React
     - Hooks

@@ -104,6 +104,20 @@
     def="an attribute, quality, or characteristic of something."
   />
   ```
+  ### Hooks
+  - easier and clearer way of managing state
+  - can only be used in functional components
+
+## Class Components
+
+```Javascript
+class App extends React.Component {
+  render() {
+    return <h1>Hello</h1>;
+  }
+}
+
+```
 
 ## Maping Data To Components
 
@@ -177,6 +191,10 @@
   }
 
   ```
+
+# Complex State
+
+- add details...
 
 # OLD:
 
