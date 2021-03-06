@@ -19,7 +19,7 @@
 
 # Sources
 
-- [PHP Programming Language Tutorial - Full Course](https://www.youtube.com/watch?v=OK_JCtrrv-c&t=1293s): at 4:29 mark
+- [PHP Programming Language Tutorial - Full Course](https://www.youtube.com/watch?v=OK_JCtrrv-c&t=1293s)
 
 # My Setup:
 
@@ -488,3 +488,41 @@
   ```
 
 # Inheritance
+
+```php
+<?php
+  class Chef {
+    function makeChicken() {
+      echo "Cooking chicken";
+    }
+
+    function makeSalad() {
+      echo "Making salad";
+    }
+
+    function makeSpecialDish() {
+      echo "Making bbq ribs";
+    }
+  }
+
+  class ItalianChef extends Chef {
+    function makePasta() {
+      echo "Making pasta";
+    }
+
+    function makeSpecialDish() {
+      echo "Making chicken parm";
+    }
+  }
+
+  $chef = new Chef();
+  $chef->makeChicken();
+
+  $italianChef = new ItalianChef();
+  $italianChef->makeChicken();
+  $italianChef->makePasta();
+
+  $chef->makeSpecialDish(); // bbq ribs
+  $italianChef->makeSpecialDish(); // chicken parm
+?>
+```
