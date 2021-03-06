@@ -11,10 +11,12 @@
   - [Checkboxes](#Checkboxes)
   - [Associative Arrays](#Associative-Arrays)
 - [Functions](#Functions)
+- [Include & Components](#Include-&-Components)
+- [Classes & Objects](#Classes-&-Objects)
 
 # Sources
 
-- [PHP Programming Language Tutorial - Full Course](https://www.youtube.com/watch?v=OK_JCtrrv-c&t=1293s): at 1:50 mark
+- [PHP Programming Language Tutorial - Full Course](https://www.youtube.com/watch?v=OK_JCtrrv-c&t=1293s): at 3:46 mark
 
 # My Setup:
 
@@ -322,3 +324,51 @@
     }
   ?>
   ```
+
+# Include & Components
+
+- Simple component examples
+
+  ```php
+  <?php include "header.html" ?>
+  <?php include "footer.html" ?>
+  ```
+
+- We can give php files data
+
+  - Within article-header.php:
+    ```php
+      <h2><?php echo $title; ?></h2>
+      <h4><?php echo $author; ?></h4>
+      word count: <?php echo $wordCount; ?>
+    ```
+  - site.php:
+    ```php
+    <?php
+      $title = "Awesome article";
+      $author = "Matt";
+      $wordCount = 2034;
+      include "article-header.php";
+    ?>
+    ```
+
+- Using functions & vars from separate PHP file:
+
+  ```php
+  <!-- useful-tools.php -->
+  <?php
+    $feetInMile = 5280;
+    function sayHi($name) {
+      echo "Hello $name";
+    }
+  ?>
+
+  <!-- Within site.php -->
+  <?php
+    include "useful-tools.php";
+    sayHi("mike");
+    echo $feetInMile;
+  ?>
+  ```
+
+# Classes & Objects
