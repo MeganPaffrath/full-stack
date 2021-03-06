@@ -13,10 +13,13 @@
 - [Functions](#Functions)
 - [Include & Components](#Include-&-Components)
 - [Classes & Objects](#Classes-&-Objects)
+  - [Object Functions](#Object-Functions)
+  - [Getters & Setters](#Getters-&-Setters)
+- [Inheritance](#Inheritance)
 
 # Sources
 
-- [PHP Programming Language Tutorial - Full Course](https://www.youtube.com/watch?v=OK_JCtrrv-c&t=1293s): at 3:46 mark
+- [PHP Programming Language Tutorial - Full Course](https://www.youtube.com/watch?v=OK_JCtrrv-c&t=1293s): at 4:29 mark
 
 # My Setup:
 
@@ -372,3 +375,116 @@
   ```
 
 # Classes & Objects
+
+- Use class to create "custom data type"
+- Ex: book class
+
+  ```php
+  class Book {
+      var $title;
+      var $author;
+      var $pages;
+    }
+
+    $book1 = new Book;
+    $book1->title = "Harry Potter";
+    $book1->author = "JK Rowling";
+    $book1->pages = "400";
+
+    echo $book1->title; // Harry Potter
+  ```
+
+- Book class, with constructor
+
+  ```php
+  class Book {
+    var $title;
+    var $author;
+    var $pages;
+
+    function __construct($title, $author, $pages) {
+      $this->title = $title;
+      $this->author = $author;
+      $this->pages = $pages;
+    }
+  }
+
+  $book1 = new Book("Harry Potter", "JK Rowling", 400);
+
+  echo $book1->pages; // Harry Potter
+  ```
+
+# Object Functions
+
+- Object with a function
+
+  ```php
+  <?php
+    class Student {
+      var $name;
+      var $major;
+      var $gpa;
+
+      function __construct($name, $major, $gpa) {
+        $this->name = $name;
+        $this->major = $major;
+        $this->gpa = $gpa;
+      }
+
+      function hasHonors() {
+        return $this->gpa >= 3.5;
+      }
+    }
+
+    $student1 = new Student("Jim", "Business", 2.8);
+    $student2 = new Student("Abby", "Music", 3.8);
+
+
+    if ($student1->hasHonors() == true) {
+      echo "$student1->name has honors";
+    } else {
+      echo "$student1->name does not have honors";
+    }
+  ?>
+  ```
+
+## Getters & Setters
+
+- Visibility modifier : keyword that tells php what code can access/use different attributes is program
+  - ex: public / private
+- Setter / Getter movie EX:
+
+  ```php
+  <?php
+    class Movie {
+      public $title;
+      private $rating; // cannot change/access outside of class
+
+      function __construct($title, $rating) {
+        $this->title = $title;
+        $this->setRating($rating);
+      }
+
+      function getRating() {
+        return $this->rating;
+      }
+
+      function setRating($rating) {
+        if($rating == "G" || $rating == "PG" || $rating == "PG-13"
+          || $rating == "R" || $rating == "NR") {
+            $this->rating = $rating;
+        }
+      }
+    }
+
+    $avengers = new Movie("Avengers", "PG-13");
+
+    echo $avengers->getRating(); // PG-13
+    $avengers->setRating("R");
+    echo $avengers->getRating(); //R
+    $avengers->setRating("I like turtles");
+    echo $avengers->getRating(); // R
+  ?>
+  ```
+
+# Inheritance
