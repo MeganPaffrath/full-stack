@@ -8,6 +8,9 @@
 - [User Input](#User-Input)
   - [Get VS Post](#Get-VS-Post)
 - [Arrays](#Arrays)
+  - [Checkboxes](#Checkboxes)
+  - [Associative Arrays](#Associative-Arrays)
+- [Functions](#Functions)
 
 # Sources
 
@@ -209,3 +212,113 @@
   echo count($friends); // 6
 ?>
 ```
+
+## Checkboxes
+
+- array of checked values
+
+  ```php
+    <body>
+      <form action="site.php" method="post">
+        Apples: <input type="checkbox" name="fruits[]" value="apples"> <br>
+        Pears: <input type="checkbox" name="fruits[]" value="pears"> <br>
+        Oranges: <input type="checkbox" name="fruits[]" value="pears"> <br>
+        <input type="submit">
+      </form>
+
+      <?php
+        $fruits = $_POST["fruits"];
+        echo $fruits[0]; // first checked element
+      ?>
+    </body>
+  ```
+
+## Associative Arrays
+
+- can store key value pairs
+
+  - keys must all be unique
+
+  ```php
+  <?php
+    $grades = array("Jim"=>"A+", "Pam"=>"B-", "Oscar"=>"C+");
+    echo $grades["Jim"];
+  ?>
+  ```
+
+- form and associative array example
+
+  ```php
+  <body>
+    <form action="site.php" method="post">
+      <input type="text" name="student">
+      <input type="submit">
+    </form>
+
+    <?php
+      $grades = array("Jim"=>"A+", "Pam"=>"B-", "Oscar"=>"C+");
+      echo $grades[$_POST["student"]];
+    ?>
+  </body>
+  ```
+
+# Functions
+
+- Simple functions
+
+  ```php
+  <?php
+      function sayHi($name, $age) {
+        echo "Hello $name, you are $age <br>";
+      }
+
+      sayHi("Abby", 16);
+
+      function cube($num) {
+        return $num * $num * $num;
+      }
+
+      echo(cube(4)); // 64
+  ?>
+  ```
+
+- if/else
+
+  ```php
+  <?php
+      $likesCoffee = true;
+      $dogPerson = true;
+
+      if($likesCoffee && $dogPerson) {
+        echo "You are a dog person that likes coffee.";
+      } elseif(!$likesCoffee && $dogPerson) {
+        echo "You are a dog person that does not like coffee.";
+      } else {
+        echo "Why do you not like dogs?";
+      }
+    ?>
+  ```
+
+- while loop
+
+  ```php
+  <?php
+  // counts 1, 2, 3, 4, 5
+    $index = 1;
+    while($index <=5) {
+      echo "$index <br>";
+      $index++;
+    }
+  ?>
+  ```
+
+- for loop
+
+  ```php
+  // counts 1, 2, 3, 4, 5
+  <?php
+    for ($i = 1; $i <= 5; $i++) {
+      echo "$i <br>";
+    }
+  ?>
+  ```
