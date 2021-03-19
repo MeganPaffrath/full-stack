@@ -330,6 +330,10 @@ if (someValue == 3) {
 }
 ```
 
+# Notes 2/13/21 - Modern js
+
+- let:
+
 <!--
 # OLD
 ## Callback Functions
@@ -384,3 +388,34 @@ class Singer extends Person {
   - this points to an instance of an object from within its class def.
   - In JS there is a secondary feature:
     - also keeps track of `execution context` (often based on where func was called from) -->
+
+# 2/13/2021
+
+- Babel preprocessor that converts code to be understandable to older browsers
+
+## Object Destructuring
+
+- Pull objects/functions out of other objects
+  ```JavaScript
+    {a, b} = {a: 1, b: 3};
+  ```
+
+## Promises
+
+```JavaScript
+let first = new Promise((resolve, reject) => {
+  // download
+  resolve()
+});
+
+let second = new Promise((resolve, reject) => {
+  // download
+  resolve()
+});
+
+await Promise.all([first, second]);
+
+alert("Finished downloads");
+```
+
+##
