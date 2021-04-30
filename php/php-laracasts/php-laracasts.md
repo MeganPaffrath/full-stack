@@ -11,6 +11,9 @@
 - [5. Separate PHP Logic From Presentation](#Separate-PHP-Logic-From-Presentation)
   - shorthand array iteration
 - [6. Understanding Arrays](#Understanding-Arrays)
+- [7. Associative Arrays](#Associative-Arrays)
+  - [Append to Arrays](#Append-to-Arrays)
+  - [View Variables](#View-Variables)
 
 # Install
 
@@ -162,3 +165,128 @@
       </ul>
     </body>
     ```
+
+# Associative Arrays
+
+- consists of any number of key value pairs
+- index.php
+
+  ```php
+  <?php
+
+  $person = [
+    'age' => 25,
+    'hair' => "brown",
+    'major' => 'cs'
+  ];
+
+  require "index.view.php";
+  ```
+
+- index.view.php
+
+  ```php
+  <body>
+    <?php foreach ($person as $key => $val) : ?>
+      <li><?= $key . ": " . $val; ?></li>
+    <?php endforeach; ?>
+  </body>
+  ```
+
+  - even better, define key and val variables to make them make more sense.
+
+    ```php
+    <?php foreach ($person as $attribute => $attributeVal) : ?>
+      <li><?= $attribute . ": " . $attributeVal; ?></li>
+    <?php endforeach; ?>
+    ```
+
+- remove key val pair
+
+```php
+unset($person['age']);
+```
+
+## Append to Arrays
+
+- index.php
+
+  ```php
+  <?php
+
+  $colors = ['red', 'blue', 'green'];
+  $colors[] = 'orange';
+
+  $person = [
+    'age' => 25,
+    'hair' => "brown",
+    'major' => 'cs'
+  ];
+  $person['name'] = 'Megan';
+
+  require "index.view.php";
+  ```
+
+- index.styles.php
+
+  ```php
+  <body>
+    <?php foreach ($person as $attribute => $attributeVal) : ?>
+      <li><?= $attribute . ": " . $attributeVal; ?></li>
+    <?php endforeach; ?>
+
+    <h1>Colors</h1>
+    <?php foreach ($colors as $color) : ?>
+      <li><?= $color ?></li>
+    <?php endforeach; ?>
+  </body>
+  ```
+
+## View Variables
+
+- When not a string or int: use `var_dump` function
+
+  ```php
+  <?php
+  $person = [
+    'age' => 25,
+    'hair' => "brown",
+    'major' => 'cs'
+  ];
+  var_dump($person);
+
+  // require "index.view.php";
+  ```
+
+- get formatting
+
+  ```php
+  echo '<pre>';
+  var_dump($person);
+  echo '</pre>';
+  ```
+
+- die
+
+  ```php
+  <?php
+  $person = [
+    'age' => 25,
+    'hair' => "brown",
+    'major' => 'cs'
+  ];
+
+  echo '<pre>';
+  var_dump($person);
+  echo '</pre>';
+
+  die("stop after this");
+
+  require "index.view.php"; // this never loads
+  ```
+
+  - or
+
+  ```php
+  die(var_dump($person));
+  ```

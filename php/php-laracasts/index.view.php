@@ -11,20 +11,14 @@
     <?php echo "Hello"; ?>
   </h1>
 
-  <p>
-    <?php
-      foreach ($animals as $animal) {
-        echo $animal . " ";
-      }
-    ?>
-  </p>
-
-  <ul>
-  <?php foreach ($animals as $animal) : ?>
-    <li><?= $animal ?></li>
+  <?php foreach ($person as $attribute => $attributeVal) : ?>
+    <li><?= $attribute . ": " . $attributeVal; ?></li>
   <?php endforeach; ?>
 
-  </ul>
+  <h1>Colors</h1>
+  <?php foreach ($colors as $color) : ?>
+    <li><?= $color ?></li>
+  <?php endforeach; ?>
 
 </body>
 </html>
