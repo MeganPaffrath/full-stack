@@ -7,22 +7,18 @@
   <title>Document</title>
 </head>
 <body>
-  <?php if ($isAwesome) : ?>
-    <p>So awesome, ya ya ya</p>
-  <?php else : ?>
-    <p>Lame sauce.</p>
-  <?php endif; ?>
+  <h1>Hello</h1>
 
-  <?php
-    if (!$isAwesome) {
-      echo 'Lame sauce typically contains a lot of turmeric';
-    }
-  ?>
+  <?php foreach ($tasks as $task) : ?>
+    <li>
+      <?php if ($task->isComplete()) : ?>
+        <strike><?= $task->description(); ?></strike>
+      <?php else: ?>
+        <?= $task->description(); ?>
+      <?php endif ?>
 
-  <p>
-    <?=
-      "Is it awesome? " . ($isAwesome ? "yes." : "no.");
-    ?>
-  </p>
+    </li>
+  <?php endforeach; ?>
+  
 </body>
 </html>

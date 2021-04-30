@@ -19,13 +19,13 @@
 - [10. Functions](#Functions)
 - [11. MySQL 101](#MySQL-101)
 - [12. Classes](#Classes)
+- [13. Intro to PDO](#Intro-to-PDO)
 - [Vocabulary & Such](#Vocabulary-&-Such)
 
 ## Time Left
 
-- 12 -> 17m
-- 13 -> 16m
-- 14 -> 18m
+- 13 -> 16m -> 3h
+- 14 -> 18m -> 2h 44m
 - 15 -> 7m -> 2h 26m
 - 16 -> 25m -> 2h 19m
 - 17 -> 8m -> 1h 54
@@ -448,10 +448,100 @@ unset($person['age']);
 
 # Classes
 
-- LOCATION: https://laracasts.com/series/php-for-beginners/episodes/12?autoplay=true
+- classes are like the blueprint for objects
+- think about what you want to do, find the nouns to determine what classes to make
+- task app
+  - nouns: todo, comment, user
+- constructor
+  - automatically triggered on instantiation
+- example class
+
+  ```php
+  <?php
+
+  class Task {
+    protected $description;
+    protected $completed = false;
+
+    public function __construct($description) {
+      $this->description = $description;
+    }
+  }
+
+  $task = new Task('Go to the store');
+  ```
+
+- Larger example
+
+  - index.php
+
+    ```php
+    <?php
+
+    require 'functions.php';
+
+    class Task {
+      protected $description;
+      protected $completed = false;
+
+      public function __construct($description) {
+        $this->description = $description;
+      }
+
+      public function isComplete() {
+        return $this->completed;
+      }
+
+      public function complete() {
+        $this->completed = true;
+      }
+
+      public function description() {
+        return $this->description;
+      }
+    }
+
+    $tasks = [
+      new Task('Go to the store'),
+      new Task('Finish homework'),
+      new Task('Eat chocolate')
+    ];
+
+    $tasks[1]->complete();
+
+    require "index.view.php";
+    ```
+
+  - index.view.php
+
+    ```php
+    <body>
+      <h1>Hello</h1>
+
+      <?php foreach ($tasks as $task) : ?>
+        <li>
+          <?php if ($task->isComplete()) : ?>
+            <strike><?= $task->description(); ?></strike>
+          <?php else: ?>
+            <?= $task->description(); ?>
+          <?php endif ?>
+
+        </li>
+      <?php endforeach; ?>
+
+    </body>
+    ```
+
+# Intro to PDO
+
+- loc: https://laracasts.com/series/php-for-beginners/episodes/13?autoplay=true
 
 # Vocabulary & Such
 
 - SQL
   - `primary key` : unique identifier for the row
   - `foreign key` :
+- Programming
+  - `method` : a function within a class
+  - `protected` : protected from the outside world, cannot access outside of class
+  - `public` : can be accessed outside of class
