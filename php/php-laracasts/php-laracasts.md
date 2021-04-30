@@ -16,11 +16,13 @@
   - [View Variables](#View-Variables)
 - [8. Booleans](#Booleans)
 - [9. Conditionals](#Conditionals)
+- [10. Functions](#Functions)
+- [11. MySQL 101](#MySQL-101)
+- [12. Classes](#Classes)
+- [Vocabulary & Such](#Vocabulary-&-Such)
 
 ## Time Left
 
-- 10 -> 8m
-- 11 -> 17m
 - 12 -> 17m
 - 13 -> 16m
 - 14 -> 18m
@@ -358,3 +360,98 @@ unset($person['age']);
     ?>
   </p>
   ```
+
+# Functions
+
+- Examples:
+  - `htmlspecialchars();`
+  - `ucwords();`
+- Make our own functions
+  - die & dump
+    ```php
+    function dd($data) {
+      echo '<pre>';
+      die(var_dump($data));
+      echo '</pre>';
+    }
+    ```
+- Extra separation of concerns
+
+  - index.php
+    - setup
+  - functions.php
+    - functions
+  - index.view.php
+    - render contents
+  - examples
+
+    - index.php
+
+      ```php
+      <?php
+      require 'functions.php';
+
+      $animals = ['dog', 'cat'];
+
+      dd($animals);
+
+      die(var_dump($animals));
+
+      require "index.view.php";
+      ```
+
+    - fuctions.php
+
+      ```php
+      <?php
+
+      function dd($data) {
+        echo '<pre>';
+        die(var_dump($data));
+        echo '</pre>';
+      }
+      ```
+
+# MySQL 101
+
+- terminal: use local server
+  - `mysql -uroot -ppassword`
+  - Show databases
+    - `show databases;`
+  - Create new table
+    ```
+    mysql> create database mytodo
+    -> ;
+    ```
+  - use specific database
+    - `use mytodo`
+  - create a table
+    - `create table todos (description text, completed boolean);`
+  - view tables
+    - `show tables;`
+  - table description
+    - `describe todos;`
+    - Null: can we use a null value? yes/no
+  - delete table
+    - `drop table todos;`
+  - lets recreate table better, with auto incrementing id val and no null vals
+    - `create table todos (id integer PRIMARY KEY AUTO_INCREMENT, description text NOT NULL, completed boolean NOT NULL);`
+      - primary key : unique identifier for the row
+  - insert into talbe
+    `insert into todos (description, completed);`
+  - select all from table
+    - `select * from todos`
+- various GUIs
+  - Sequel Pro
+  - Querious
+  - Navicat
+
+# Classes
+
+- LOCATION: https://laracasts.com/series/php-for-beginners/episodes/12?autoplay=true
+
+# Vocabulary & Such
+
+- SQL
+  - `primary key` : unique identifier for the row
+  - `foreign key` :
