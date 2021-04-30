@@ -14,6 +14,27 @@
 - [7. Associative Arrays](#Associative-Arrays)
   - [Append to Arrays](#Append-to-Arrays)
   - [View Variables](#View-Variables)
+- [8. Booleans](#Booleans)
+- [9. Conditionals](#Conditionals)
+
+## Time Left
+
+- 10 -> 8m
+- 11 -> 17m
+- 12 -> 17m
+- 13 -> 16m
+- 14 -> 18m
+- 15 -> 7m -> 2h 26m
+- 16 -> 25m -> 2h 19m
+- 17 -> 8m -> 1h 54
+- 18 -> 14m => 1h 46m
+- 19 -> 14m -> 1h 32m
+- 20 -> 13m -> 1h 18m
+- 21 -> 5m -> 1h 5m
+- 22 -> 8m -> 59m
+- 23 -> 18m -> 51m
+- 24 -> 15m -> 33m
+- 25 -> 18m
 
 # Install
 
@@ -289,4 +310,51 @@ unset($person['age']);
 
   ```php
   die(var_dump($person));
+  ```
+
+# Booleans
+
+- `$isGood = true;`
+
+# Conditionals
+
+- if, if else, & ternary operators
+- if else
+
+  - index.php
+
+    ```php
+    <?php
+
+    $isAwesome = false;
+
+    require "index.view.php";
+    ```
+
+  - index.view.php
+    ```php
+    <body>
+      <?php if ($isAwesome) : ?>
+        <p>So awesome, ya ya ya</p>
+      <?php else : ?>
+        <p>Lame sauce.</p>
+      <?php endif; ?>
+    </body>
+    ```
+
+- if
+  ```php
+  <?php
+    if (!$isAwesome) {
+      echo 'Lame sauce typically contains a lot of turmeric';
+    }
+  ?>
+  ```
+- ternary
+  ```php
+  <p>
+    <?=
+      "Is it awesome? " . ($isAwesome ? "yes." : "no.");
+    ?>
+  </p>
   ```

@@ -7,18 +7,22 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>
-    <?php echo "Hello"; ?>
-  </h1>
+  <?php if ($isAwesome) : ?>
+    <p>So awesome, ya ya ya</p>
+  <?php else : ?>
+    <p>Lame sauce.</p>
+  <?php endif; ?>
 
-  <?php foreach ($person as $attribute => $attributeVal) : ?>
-    <li><?= $attribute . ": " . $attributeVal; ?></li>
-  <?php endforeach; ?>
+  <?php
+    if (!$isAwesome) {
+      echo 'Lame sauce typically contains a lot of turmeric';
+    }
+  ?>
 
-  <h1>Colors</h1>
-  <?php foreach ($colors as $color) : ?>
-    <li><?= $color ?></li>
-  <?php endforeach; ?>
-
+  <p>
+    <?=
+      "Is it awesome? " . ($isAwesome ? "yes." : "no.");
+    ?>
+  </p>
 </body>
 </html>
