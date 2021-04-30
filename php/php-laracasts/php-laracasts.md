@@ -9,6 +9,8 @@
 - [3. Variables](#Variables)
 - [4. PHP and HTML](#PHP-and-HTML)
 - [5. Separate PHP Logic From Presentation](#Separate-PHP-Logic-From-Presentation)
+  - shorthand array iteration
+- [6. Understanding Arrays](#Understanding-Arrays)
 
 # Install
 
@@ -86,13 +88,13 @@
 - Shorthand
 
   ```php
-  <?= "Hello" ?>
+  <?= "Hello"; ?>
   ```
 
   - is shorthand for
 
   ```php
-  <?php echo "Hello" ?>
+  <?php echo "Hello"; ?>
   ```
 
 # Separate PHP Logic From Presentation
@@ -110,6 +112,28 @@
 
     $greeting = "Hello, World";
 
+    require 'index.view.php';
+    ```
+
+  - index.view.php
+
+    ```php
+    <body>
+      <header>
+        <h1> <?= $greeting; ?> </h1>
+      </header>
+    </body>
+    ```
+
+# Understanding Arrays
+
+- File examples
+
+  - index.php
+
+    ```php
+    <?php
+
     $names = [
       'Megan',
       'Bob',
@@ -123,10 +147,6 @@
 
     ```php
     <body>
-      <header>
-        <h1> <?= $greeting; ?> </h1>
-      </header>
-
       <ul>
         <?php
           foreach ($names as $name) {
