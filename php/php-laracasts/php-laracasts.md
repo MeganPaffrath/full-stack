@@ -22,6 +22,7 @@
 - [13. Intro to PDO](#Intro-to-PDO) : php data objects
 - [14. PDO Refactoring and Collaborators](#PDO-Refactoring-and-Collaborators)
 - [15. Hide Your Secret Passwords](#Hide-Your-Secret-Passwords)
+- [16. Make a Router](#Make-a-Router)
 - [Vocabulary & Such](#Vocabulary-&-Such)
 
 ## Time Left
@@ -674,7 +675,12 @@ unset($person['age']);
 
 # Hide Your Secret Passwords
 
-- loc: https://laracasts.com/series/php-for-beginners/episodes/15?autoplay=true
+- make config file
+- password should not be posted to github (but for the case of learning, I pushed it)
+
+# Make a Router
+
+- loc: https://laracasts.com/series/php-for-beginners/episodes/16?autoplay=true
 
 # Vocabulary & Such
 
