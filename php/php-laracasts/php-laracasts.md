@@ -21,11 +21,11 @@
 - [12. Classes](#Classes)
 - [13. Intro to PDO](#Intro-to-PDO) : php data objects
 - [14. PDO Refactoring and Collaborators](#PDO-Refactoring-and-Collaborators)
+- [15. Hide Your Secret Passwords](#Hide-Your-Secret-Passwords)
 - [Vocabulary & Such](#Vocabulary-&-Such)
 
 ## Time Left
 
-- 14 -> 18m -> 2h 44m
 - 15 -> 7m -> 2h 26m
 - 16 -> 25m -> 2h 19m
 - 17 -> 8m -> 1h 54
@@ -662,7 +662,19 @@ unset($person['age']);
 
 # PDO Refactoring and Collaborators
 
-- loc: https://laracasts.com/series/php-for-beginners/episodes/14?autoplay=true
+- refactoring : changing code without changing behavior
+  - make it cleaner, change structure
+- static method
+  - call static method `ClassName::StaticMethod()`
+- bootstrap file for behind the scenes work
+- new files
+  - Database
+    - Connection.php
+    - QueryBuilder.php
+
+# Hide Your Secret Passwords
+
+- loc: https://laracasts.com/series/php-for-beginners/episodes/15?autoplay=true
 
 # Vocabulary & Such
 
