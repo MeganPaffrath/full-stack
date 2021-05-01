@@ -20,11 +20,11 @@
 - [11. MySQL 101](#MySQL-101)
 - [12. Classes](#Classes)
 - [13. Intro to PDO](#Intro-to-PDO) : php data objects
+- [14. PDO Refactoring and Collaborators](#PDO-Refactoring-and-Collaborators)
 - [Vocabulary & Such](#Vocabulary-&-Such)
 
 ## Time Left
 
-- 13 -> 16m -> 3h
 - 14 -> 18m -> 2h 44m
 - 15 -> 7m -> 2h 26m
 - 16 -> 25m -> 2h 19m
@@ -574,14 +574,95 @@ unset($person['age']);
     die('Could not connect.' . $e->getMessage());
   }
 
-  $statement = $pdo->prepare('select * from todos');
-
-  $statement->execute();
-
-  var_dump($statement->fetch());
-
   require "index.view.php";
   ```
+
+- prepare query and show results
+
+  ```php
+  $statement = $pdo->prepare('select * from todos');
+  $statement->execute();
+
+  // var_dump($statement->fetchAll());
+  echo "<br>";
+  $results = $statement->fetchAll(PDO::FETCH_OBJ);
+
+  var_dump($results[0]->description);
+  ```
+
+  - PDO & separation of concerns
+
+    - index.php
+
+      ```php
+      <?php
+
+      require 'Task.php';
+      require 'functions.php';
+
+      $pdo = connectToDb();
+      $tasks = fetchAllTasks($pdo);
+
+      var_dump($tasks[0]->description);
+
+      require "index.view.php";
+      ```
+
+    - functions.php
+
+      ```php
+      <?php
+      // try to connect to pdo
+      // handle exception if we fail to connect to the database
+      function connectToDb() {
+        $host = '127.0.0.1';
+        $db   = 'mytodo';
+        $user = 'root';
+        $pass = 'password';
+        $charset = 'utf8mb4';
+
+        $options = [
+          \PDO::ATTR_ERRMODE            => \PDO::ERRMODE_EXCEPTION,
+          \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC,
+          \PDO::ATTR_EMULATE_PREPARES   => false,
+        ];
+
+        $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+
+        try {
+          return new PDO($dsn, $user, $pass, $options);
+        } catch (PDOException $e) {
+          die('Could not connect.' . $e->getMessage());
+        }
+      }
+
+      function fetchAllTasks($pdo) {
+        $statement = $pdo->prepare('select * from todos');
+
+        $statement->execute();
+
+        // var_dump($statement->fetchAll());
+        echo "<br>";
+        return $statement->fetchAll(PDO::FETCH_CLASS, "Task");
+      }
+      ```
+
+    - index.view.php
+      ```php
+      <?php foreach ($tasks as $task) : ?>
+      <li>
+        <?php if ($task->completed) : ?>
+          <strike><?= $task->description; ?></strike>
+        <?php else: ?>
+          <?= $task->description; ?>
+        <?php endif ?>
+      </li>
+      <?php endforeach; ?>
+      ```
+
+# PDO Refactoring and Collaborators
+
+- loc: https://laracasts.com/series/php-for-beginners/episodes/14?autoplay=true
 
 # Vocabulary & Such
 
