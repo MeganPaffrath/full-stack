@@ -1,43 +1,31 @@
 <?php
+// try to connect to pdo
+// handle exception if we fail to connect to the database
 
-require 'functions.php';
+$host = '127.0.0.1';
+$db   = 'mytodo';
+$user = 'root';
+$pass = 'password';
+$charset = 'utf8mb4';
 
-class Task {
-  protected $description;
-  protected $completed = false;
-
-  public function __construct($description) {
-    $this->description = $description;
-  }
-
-  public function isComplete() {
-    return $this->completed;
-  }
-
-  public function complete() {
-    $this->completed = true;
-  }
-
-  public function description() {
-    return $this->description;
-  }
-}
-
-$tasks = [
-  new Task('Go to the store'),
-  new Task('Finish homework'),
-  new Task('Eat chocolate')
+$options = [
+  \PDO::ATTR_ERRMODE            => \PDO::ERRMODE_EXCEPTION,
+  \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC,
+  \PDO::ATTR_EMULATE_PREPARES   => false,
 ];
 
-$tasks[1]->complete();
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 
-// dd($tasks);
+try {
+  $pdo = new PDO($dsn, $user, $pass, $options);
+} catch (PDOException $e) {
+  die('Could not connect.' . $e->getMessage());
+}
 
-// $task = new Task('Go to the store');
-// var_dump($task->isComplete());
-// $task->complete();
-// var_dump($task->isComplete());
+$statement = $pdo->prepare('select * from todos');
 
-// dd($task);
+$statement->execute();
+
+var_dump($statement->fetch());
 
 require "index.view.php";

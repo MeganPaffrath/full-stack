@@ -8,17 +8,6 @@
 </head>
 <body>
   <h1>Hello</h1>
-
-  <?php foreach ($tasks as $task) : ?>
-    <li>
-      <?php if ($task->isComplete()) : ?>
-        <strike><?= $task->description(); ?></strike>
-      <?php else: ?>
-        <?= $task->description(); ?>
-      <?php endif ?>
-
-    </li>
-  <?php endforeach; ?>
   
 </body>
 </html>

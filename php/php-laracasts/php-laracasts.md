@@ -19,7 +19,7 @@
 - [10. Functions](#Functions)
 - [11. MySQL 101](#MySQL-101)
 - [12. Classes](#Classes)
-- [13. Intro to PDO](#Intro-to-PDO)
+- [13. Intro to PDO](#Intro-to-PDO) : php data objects
 - [Vocabulary & Such](#Vocabulary-&-Such)
 
 ## Time Left
@@ -438,7 +438,10 @@ unset($person['age']);
     - `create table todos (id integer PRIMARY KEY AUTO_INCREMENT, description text NOT NULL, completed boolean NOT NULL);`
       - primary key : unique identifier for the row
   - insert into talbe
-    `insert into todos (description, completed);`
+    ```
+    mysql> insert into todos (description, completed)
+      -> VALUES("Eat food", 1);
+    ```
   - select all from table
     - `select * from todos`
 - various GUIs
@@ -534,13 +537,59 @@ unset($person['age']);
 
 # Intro to PDO
 
-- loc: https://laracasts.com/series/php-for-beginners/episodes/13?autoplay=true
+- `PDO`: PHP data objects
+  - offers an interface to connect to the database
+  - ALWAYS wrap in a try catch block
+    ```php
+    try {
+      // make connection
+    } catch (PDOException $e) {
+      die('Could not conect.');
+    }
+    ```
+- connect to the database
+
+  ```php
+  <?php
+  // try to connect to pdo
+  // handle exception if we fail to connect to the database
+
+  $host = '127.0.0.1';
+  $db   = 'mytodo';
+  $user = 'root';
+  $pass = 'password';
+  $charset = 'utf8mb4';
+
+  $options = [
+    \PDO::ATTR_ERRMODE            => \PDO::ERRMODE_EXCEPTION,
+    \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC,
+    \PDO::ATTR_EMULATE_PREPARES   => false,
+  ];
+
+  $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+
+  try {
+    $pdo = new PDO($dsn, $user, $pass, $options);
+  } catch (PDOException $e) {
+    die('Could not connect.' . $e->getMessage());
+  }
+
+  $statement = $pdo->prepare('select * from todos');
+
+  $statement->execute();
+
+  var_dump($statement->fetch());
+
+  require "index.view.php";
+  ```
 
 # Vocabulary & Such
 
 - SQL
   - `primary key` : unique identifier for the row
   - `foreign key` :
+- PHP
+  - `PDO`: PHP data objects
 - Programming
   - `method` : a function within a class
   - `protected` : protected from the outside world, cannot access outside of class
