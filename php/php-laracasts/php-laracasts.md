@@ -4,6 +4,7 @@
 
 ## Contents
 
+- [Re-watch](#Re-watch)
 - [1. Install](#Install)
 - [2. Intro ](#Intro)
 - [3. Variables](#Variables)
@@ -37,6 +38,10 @@
 - 23 -> 18m -> 51m
 - 24 -> 15m -> 33m
 - 25 -> 18m
+
+# Re-watch
+
+- [Static and method chaining](https://laracasts.com/series/php-for-beginners/episodes/16?autoplay=true) : 16:47
 
 # Install
 
@@ -682,6 +687,10 @@ unset($person['age']);
 - Controller is an entry point for a route
 - controller delegates to view (hands off data gathered)
 - MVC - model view controller
+- Super global
+  - `var_dump($_SERVER);`
+    - from this, we want request uri
+  - $\_GET, $\_POST
 
 # Vocabulary & Such
 
