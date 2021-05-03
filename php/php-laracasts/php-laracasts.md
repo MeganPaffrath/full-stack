@@ -24,6 +24,7 @@
 - [14. PDO Refactoring and Collaborators](#PDO-Refactoring-and-Collaborators)
 - [15. Hide Your Secret Passwords](#Hide-Your-Secret-Passwords)
 - [16. Make a Router](#Make-a-Router)
+- [17. Dry Up Your Views](#Dry-Up-Your-Views)
 - [Vocabulary & Such](#Vocabulary-&-Such)
 
 ## Time Left
@@ -691,6 +692,10 @@ unset($person['age']);
   - `var_dump($_SERVER);`
     - from this, we want request uri
   - $\_GET, $\_POST
+
+# Dry Up Your Views
+
+- loc: https://laracasts.com/series/php-for-beginners/episodes/17?autoplay=true
 
 # Vocabulary & Such
 

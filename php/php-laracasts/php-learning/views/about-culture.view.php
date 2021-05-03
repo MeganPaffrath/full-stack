@@ -7,6 +7,6 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>About Culture</h1>
+  <h1>About Culture at <?= $name ?></h1>
 </body>
 </html>
