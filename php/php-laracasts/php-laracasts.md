@@ -27,7 +27,6 @@
 
 ## Time Left
 
-- 15 -> 7m -> 2h 26m
 - 16 -> 25m -> 2h 19m
 - 17 -> 8m -> 1h 54
 - 18 -> 14m => 1h 46m
@@ -680,7 +679,9 @@ unset($person['age']);
 
 # Make a Router
 
-- loc: https://laracasts.com/series/php-for-beginners/episodes/16?autoplay=true
+- Controller is an entry point for a route
+- controller delegates to view (hands off data gathered)
+- MVC - model view controller
 
 # Vocabulary & Such
 
@@ -693,3 +694,4 @@ unset($person['age']);
   - `method` : a function within a class
   - `protected` : protected from the outside world, cannot access outside of class
   - `public` : can be accessed outside of class
+  - `MVC`

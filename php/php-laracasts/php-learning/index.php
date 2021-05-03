@@ -1,11 +1,8 @@
 <?php
 
-require 'Task.php';
+$query = require 'core/bootstrap.php';
 
-$query = require 'bootstrap.php';
+$router = new Router;
+require 'routes.php'; // defines routes
 
-$tasks = $query->selectAll('todos', 'Task');
-
-die(var_dump($tasks));
-
-require "index.view.php";
+require $router->direct('contact');
