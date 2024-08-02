@@ -28,6 +28,9 @@
 
 # Mini Projects
 
+- [Museum Of Candy](projects/museumofcandy)
+  - Tech: HTML, CSS, Bootstrap
+  - Simple website for a museum of candy
 - [Dynamic Blog](projects/blog)
   - Tech: Node, Express, EJS (templating)
   - User can add new posts and page updates accordingly
